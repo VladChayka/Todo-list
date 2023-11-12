@@ -1,0 +1,1302 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Todo List API",
+    "description": "Api documentation for TODO list",
+    "version": "1.0.0"
+  },
+  "servers": [],
+  "paths": {
+    "/register": {
+      "post": {
+        "summary": "Register",
+        "operationId": "post-register",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "tokenType": {
+                          "type": "string"
+                        },
+                        "expiresIn": {
+                          "type": "integer"
+                        },
+                        "accessToken": {
+                          "type": "string"
+                        },
+                        "refreshToken": {
+                          "type": "string"
+                        },
+                        "refreshTokenExpiresAt": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  },
+                  "x-examples": {
+                    "Example 1": {
+                      "status": "success",
+                      "data": {
+                        "tokenType": "Bearer",
+                        "expiresIn": 2592000,
+                        "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiN2EwMjA2ZDVlNzIxZmNlNDQ1YTQxMmViYjQ2NDRkZjQ2Yjc4NDhiNTY4YzJjZWFlYjM3YjJjNmRjMDc5Y2RiOWUxYzlhYTlmMTNiNmRiMjAiLCJpYXQiOjE2OTk4MjExMTkuNTIzNzI3LCJuYmYiOjE2OTk4MjExMTkuNTIzNzMxLCJleHAiOjE3MDI0MTMxMTkuNTA0NTk1LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.lJy0_gh95XyrHyCFT-g3UtX6jOX-VuCbhCs7rK3WKhIT4vNhf28WN8QqSzFq0LkQso4-Df35g2UUvkww5pow6h7_N7KxclnLciDbdTBZxFujrTndz7nNwTxTKi3TIVJl17VuQ83-jGmNIn5YTmdhctUQmS5pY8a1DWLXtG6hboQpNGkkHtH0CvYA3gZ2yPdQ4VTRu9pPL68BD-j8mAWVZ48yLPfekoz4oDBN3wf2kVVafXK1DnuiRqvW3a4mY3BEWW6mqhbvhmIVD3xeYOwJE3COryqcZxyp19px8ia5ro6WfATGHV6t57WWh8dJU0Y7h4Zzm9fRYLaZ9jfswJ9S6Ja03InoQGVajbrl-24413jYeOBN1xO45hnpNDjEX0eeWdgkK_suqfwQtmInTdGAT48craQD7gemXE96pee2c32wF2Sk2P8Yfh7e-MkFxDv4KDuxxZOOajPqICuEqnPhlJcvwgzoLSymxqKjOdWNTZkCvskJcM7dET9U247fBbdZPTrcBY-bk6U8-18V4sXO3kPaqJRvgTR3iXVFrSE7ecHIPuwicCv7W_iK-r-oXRFavgGkV36kwOOsdEdn7UZgr0J37tZ6MRbIBw84Zb_l1OqoRKQqQl7kZg_ulax8H3KB30tOsy6PHHbKooYFOVrcWOWZ0gxzq4mXdK1B7F086ns",
+                        "refreshToken": "def502004bdd1c143b84a18ab223c4576050e3aacf8d56881d11559d05965de40bae4d034c8807bcac4ff2ef5a8a4ffcbe28119c150043d6e48a664f315d14e91954abce3b55fc53ab7d9441c8a1978d4e90f43e89955ea65fed787e5ff89e8f39e93cd51f67150bbddcd22265301f6162cc471234dd0d57c4dc983999dc1183ffbff9b2e6b41fdc0251de5748723785951216386c7fbdcecfe95391f9d5a76c844b50dff231fc8db29294efc746f48409c9ea1ca738f7d46277d6a73d9b32b848524183d769f9b412e71f39e29c916cf4af182028a456d1cf11ba1e6cfaaf4fb2c56be75d5ecbb119a23e463d2cdefd6800514d7fca81719589aa5298ef980679733d21d5dbfe5a71b1eb8ec40fc69cd83f8484dd7c2be73c5f150957eb0c377ac87563e5e0e89aaaa04039a08ad1617956899456cb3073d8fe5f0a6d50085dfad7ea73137e35da58657cac0a77b51c4076e04982f79936a05e07ee2c1fff5f5a",
+                        "refreshTokenExpiresAt": 5183970
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Successful example": {
+                    "value": {
+                      "status": "success",
+                      "data": {
+                        "tokenType": "Bearer",
+                        "expiresIn": 2592000,
+                        "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiN2EwMjA2ZDVlNzIxZmNlNDQ1YTQxMmViYjQ2NDRkZjQ2Yjc4NDhiNTY4YzJjZWFlYjM3YjJjNmRjMDc5Y2RiOWUxYzlhYTlmMTNiNmRiMjAiLCJpYXQiOjE2OTk4MjExMTkuNTIzNzI3LCJuYmYiOjE2OTk4MjExMTkuNTIzNzMxLCJleHAiOjE3MDI0MTMxMTkuNTA0NTk1LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.lJy0_gh95XyrHyCFT-g3UtX6jOX-VuCbhCs7rK3WKhIT4vNhf28WN8QqSzFq0LkQso4-Df35g2UUvkww5pow6h7_N7KxclnLciDbdTBZxFujrTndz7nNwTxTKi3TIVJl17VuQ83-jGmNIn5YTmdhctUQmS5pY8a1DWLXtG6hboQpNGkkHtH0CvYA3gZ2yPdQ4VTRu9pPL68BD-j8mAWVZ48yLPfekoz4oDBN3wf2kVVafXK1DnuiRqvW3a4mY3BEWW6mqhbvhmIVD3xeYOwJE3COryqcZxyp19px8ia5ro6WfATGHV6t57WWh8dJU0Y7h4Zzm9fRYLaZ9jfswJ9S6Ja03InoQGVajbrl-24413jYeOBN1xO45hnpNDjEX0eeWdgkK_suqfwQtmInTdGAT48craQD7gemXE96pee2c32wF2Sk2P8Yfh7e-MkFxDv4KDuxxZOOajPqICuEqnPhlJcvwgzoLSymxqKjOdWNTZkCvskJcM7dET9U247fBbdZPTrcBY-bk6U8-18V4sXO3kPaqJRvgTR3iXVFrSE7ecHIPuwicCv7W_iK-r-oXRFavgGkV36kwOOsdEdn7UZgr0J37tZ6MRbIBw84Zb_l1OqoRKQqQl7kZg_ulax8H3KB30tOsy6PHHbKooYFOVrcWOWZ0gxzq4mXdK1B7F086ns",
+                        "refreshToken": "def502004bdd1c143b84a18ab223c4576050e3aacf8d56881d11559d05965de40bae4d034c8807bcac4ff2ef5a8a4ffcbe28119c150043d6e48a664f315d14e91954abce3b55fc53ab7d9441c8a1978d4e90f43e89955ea65fed787e5ff89e8f39e93cd51f67150bbddcd22265301f6162cc471234dd0d57c4dc983999dc1183ffbff9b2e6b41fdc0251de5748723785951216386c7fbdcecfe95391f9d5a76c844b50dff231fc8db29294efc746f48409c9ea1ca738f7d46277d6a73d9b32b848524183d769f9b412e71f39e29c916cf4af182028a456d1cf11ba1e6cfaaf4fb2c56be75d5ecbb119a23e463d2cdefd6800514d7fca81719589aa5298ef980679733d21d5dbfe5a71b1eb8ec40fc69cd83f8484dd7c2be73c5f150957eb0c377ac87563e5e0e89aaaa04039a08ad1617956899456cb3073d8fe5f0a6d50085dfad7ea73137e35da58657cac0a77b51c4076e04982f79936a05e07ee2c1fff5f5a",
+                        "refreshTokenExpiresAt": 5183970
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Entity (WebDAV)"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "x-examples": {
+                  "Example 1": {
+                    "name": "Name",
+                    "email": "email@gmail.com",
+                    "password": "12341234"
+                  }
+                }
+              },
+              "examples": {
+                "Example 1": {
+                  "value": {
+                    "name": "Name",
+                    "email": "email@gmail.com",
+                    "password": "12341234"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Get registration"
+      }
+    },
+    "/login": {
+      "post": {
+        "summary": "Login",
+        "operationId": "post-login",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "tokenType": {
+                          "type": "string"
+                        },
+                        "expiresIn": {
+                          "type": "integer"
+                        },
+                        "accessToken": {
+                          "type": "string"
+                        },
+                        "refreshToken": {
+                          "type": "string"
+                        },
+                        "refreshTokenExpiresAt": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  },
+                  "x-examples": {
+                    "Example 1": {
+                      "status": "success",
+                      "data": {
+                        "tokenType": "Bearer",
+                        "expiresIn": 2592000,
+                        "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiNzY0MDc1NTA2MGQ0NjAyZDA3YTg5YTZlYzRiZDVkYTVkMzZlMzcyY2VhYTA2NDBlMDViZWRkZGMzODhkNjNkYTk0MzEzYmM5NjlmMmFjMzIiLCJpYXQiOjE2OTk4MjE2MDAuNzk0MzM4LCJuYmYiOjE2OTk4MjE2MDAuNzk0MzQxLCJleHAiOjE3MDI0MTM2MDAuNzgxNzE4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.Z8R4dIKe86DfNtTenRp1ZbSnhNufSVZe7OIZpiI9LDeapaX-k10IcYSG2qAA9XMweT6wcrW8fX2iBJqbLyznlprePJnnv0YeYnXq8d0FissezbyCklVFHPK2AR0OFR8_9fYawIf0xfq4E2H3r3ymzmatDZ28hxNSZPwMUyCTmwt2jG3z3RaYDrLa9ko1J1_Z2feLy0AdxxUf1LzsLYz_kIVJUteX9KYxLmGrRVdey7vmyMWCxI7MAzJzTCNfHRG-Sm8WTyPEvrAy4H8P6vDcAdOu9Y7gMWY9mOkvBcSxGLiR6m8WUzHM12L3oE9yW2TVQLxHSkVLI5z2fmYNUcg-Ub1h4XJ7u0bOzimWnCFtPhNUpV7NvGalfNJwwBt83KWuySsLnJ9PfySq6lxga8Pe9Kbi-54dVIvtPR8LfEks1pG_-LQAaaR6dUn5ppcJxcfBThodLc_zaF0c5TZlAHZrALBa49Fm0q_FNCR4KAkFrnQoq5H4jxE2xK069l5pNuY0F96nQxJJYxoRTVKu7_qNzlLatBIc5BNPgrcIK8omHCrE_MdeBusR5zqR4E6GL0RfblAKQj-OW-gsz7DPdPkPseK21El7rUzYlNWYJt6YnAKfo8VA92xSizsJQL_Yq4bfXKTUM7j2ROz8BiZbg-TDaOylbsa1LW5Ebt3pecIrPlo",
+                        "refreshToken": "def502007317df81bdd1264d46f74d194aabc7b800f5763a23da7a83a9b4ad2573ae12a202d2c409183e5dd5f6d8aaa5c51427e99f7adc182cb2306260db4e094adb285483cce68fcea3bccf2797213b38da19e1105ab0d714f773ae6bd6630ee21571a862dee7af33f7b36fc654edc97b35fe28cb93e6fe9c64bd5b6141f5aab32f01c41dc1acf04fb394f88dbc14a5b5e91cef2af9d05b5c2318e44fd5ba870a74f200ba9937d1565f078947fac5c8fd7c93fabe6e45cb0ff3d9bf164ddcbcc18c1108d3199f320622f9d77717a143cc47e62cad075fc7e58506af36740d4522ae6203ccd040647d756af51f844f62ded33cd1aaab1f9aae2070b3adcc3e4dc7bdf40632c80ff964634cce6061c9d87fd40acd3b7ee45b0bd1f986f4302479d353bc58fcd2cb4c2cdaa96bf4e54b16c4b7fd2d91fa7c4c1d7f42ad6867a5c191ecb8afdde4bc8c253b27a95c4ba09671e748a13f6005f12f9f252d7246a9abb0",
+                        "refreshTokenExpiresAt": 5183970
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Successful example": {
+                    "value": {
+                      "status": "success",
+                      "data": {
+                        "tokenType": "Bearer",
+                        "expiresIn": 2592000,
+                        "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiNzY0MDc1NTA2MGQ0NjAyZDA3YTg5YTZlYzRiZDVkYTVkMzZlMzcyY2VhYTA2NDBlMDViZWRkZGMzODhkNjNkYTk0MzEzYmM5NjlmMmFjMzIiLCJpYXQiOjE2OTk4MjE2MDAuNzk0MzM4LCJuYmYiOjE2OTk4MjE2MDAuNzk0MzQxLCJleHAiOjE3MDI0MTM2MDAuNzgxNzE4LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.Z8R4dIKe86DfNtTenRp1ZbSnhNufSVZe7OIZpiI9LDeapaX-k10IcYSG2qAA9XMweT6wcrW8fX2iBJqbLyznlprePJnnv0YeYnXq8d0FissezbyCklVFHPK2AR0OFR8_9fYawIf0xfq4E2H3r3ymzmatDZ28hxNSZPwMUyCTmwt2jG3z3RaYDrLa9ko1J1_Z2feLy0AdxxUf1LzsLYz_kIVJUteX9KYxLmGrRVdey7vmyMWCxI7MAzJzTCNfHRG-Sm8WTyPEvrAy4H8P6vDcAdOu9Y7gMWY9mOkvBcSxGLiR6m8WUzHM12L3oE9yW2TVQLxHSkVLI5z2fmYNUcg-Ub1h4XJ7u0bOzimWnCFtPhNUpV7NvGalfNJwwBt83KWuySsLnJ9PfySq6lxga8Pe9Kbi-54dVIvtPR8LfEks1pG_-LQAaaR6dUn5ppcJxcfBThodLc_zaF0c5TZlAHZrALBa49Fm0q_FNCR4KAkFrnQoq5H4jxE2xK069l5pNuY0F96nQxJJYxoRTVKu7_qNzlLatBIc5BNPgrcIK8omHCrE_MdeBusR5zqR4E6GL0RfblAKQj-OW-gsz7DPdPkPseK21El7rUzYlNWYJt6YnAKfo8VA92xSizsJQL_Yq4bfXKTUM7j2ROz8BiZbg-TDaOylbsa1LW5Ebt3pecIrPlo",
+                        "refreshToken": "def502007317df81bdd1264d46f74d194aabc7b800f5763a23da7a83a9b4ad2573ae12a202d2c409183e5dd5f6d8aaa5c51427e99f7adc182cb2306260db4e094adb285483cce68fcea3bccf2797213b38da19e1105ab0d714f773ae6bd6630ee21571a862dee7af33f7b36fc654edc97b35fe28cb93e6fe9c64bd5b6141f5aab32f01c41dc1acf04fb394f88dbc14a5b5e91cef2af9d05b5c2318e44fd5ba870a74f200ba9937d1565f078947fac5c8fd7c93fabe6e45cb0ff3d9bf164ddcbcc18c1108d3199f320622f9d77717a143cc47e62cad075fc7e58506af36740d4522ae6203ccd040647d756af51f844f62ded33cd1aaab1f9aae2070b3adcc3e4dc7bdf40632c80ff964634cce6061c9d87fd40acd3b7ee45b0bd1f986f4302479d353bc58fcd2cb4c2cdaa96bf4e54b16c4b7fd2d91fa7c4c1d7f42ad6867a5c191ecb8afdde4bc8c253b27a95c4ba09671e748a13f6005f12f9f252d7246a9abb0",
+                        "refreshTokenExpiresAt": 5183970
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "tags": [
+          "Auth"
+        ],
+        "description": "Get login",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "password": {
+                    "type": "string"
+                  }
+                },
+                "x-examples": {
+                  "Example 1": {
+                    "email": "vchaika981@gmail.com",
+                    "password": "12341234"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/logout": {
+      "post": {
+        "summary": "Logout",
+        "operationId": "post-logout",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Successful example": {
+                    "value": {
+                      "status": "success"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "tags": [
+          "Auth"
+        ],
+        "description": "Get logout",
+        "security": [
+          {
+            "Authorization": []
+          }
+        ]
+      }
+    },
+    "/tasks": {
+      "get": {
+        "summary": "Tasks index",
+        "tags": [
+          "Tasks"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "title": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          },
+                          "status": {
+                            "type": "string"
+                          },
+                          "priority": {
+                            "type": "integer"
+                          },
+                          "createdAt": {
+                            "type": "string"
+                          },
+                          "completedAt": {
+                            "type": [
+                              "null",
+                              "string"
+                            ]
+                          },
+                          "userId": {
+                            "type": "integer"
+                          },
+                          "taskId": {
+                            "type": [
+                              "integer",
+                              "null"
+                            ]
+                          },
+                          "tasks": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "id": {
+                                  "type": "integer"
+                                },
+                                "title": {
+                                  "type": "string"
+                                },
+                                "description": {
+                                  "type": "string"
+                                },
+                                "status": {
+                                  "type": "string"
+                                },
+                                "priority": {
+                                  "type": "integer"
+                                },
+                                "createdAt": {
+                                  "type": "string"
+                                },
+                                "completedAt": {
+                                  "type": "null"
+                                },
+                                "userId": {
+                                  "type": "integer"
+                                },
+                                "taskId": {
+                                  "type": "integer"
+                                },
+                                "tasks": {
+                                  "type": "array",
+                                  "items": {
+                                    "type": "object",
+                                    "properties": {}
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "x-examples": {
+                    "Example 1": {
+                      "status": "success",
+                      "data": [
+                        {
+                          "id": 12,
+                          "title": "sub task1",
+                          "description": "description",
+                          "status": "todo",
+                          "priority": 1,
+                          "createdAt": "2023-11-12 18:37:44",
+                          "completedAt": null,
+                          "userId": 2,
+                          "taskId": null,
+                          "tasks": [
+                            {
+                              "id": 13,
+                              "title": "sub task",
+                              "description": "description",
+                              "status": "todo",
+                              "priority": 1,
+                              "createdAt": "2023-11-12 18:39:43",
+                              "completedAt": null,
+                              "userId": 2,
+                              "taskId": 12,
+                              "tasks": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": 1,
+                          "title": "Dr.",
+                          "description": "Earum et consequuntur delectus.",
+                          "status": "todo",
+                          "priority": 1,
+                          "createdAt": "2023-01-12 16:49:49",
+                          "completedAt": "2023-01-12 16:49:49",
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": []
+                        },
+                        {
+                          "id": 2,
+                          "title": "Prof.",
+                          "description": "Alias eum blanditiis inventore.",
+                          "status": "todo",
+                          "priority": 1,
+                          "createdAt": "2023-02-12 16:49:49",
+                          "completedAt": "2023-02-12 16:49:49",
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": []
+                        },
+                        {
+                          "id": 3,
+                          "title": "Ms.",
+                          "description": "Quis ut veniam tempora blanditiis sit assumenda.",
+                          "status": "done",
+                          "priority": 1,
+                          "createdAt": "2023-03-12 16:49:49",
+                          "completedAt": "2023-03-12 16:49:49",
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": []
+                        },
+                        {
+                          "id": 4,
+                          "title": "Ms.",
+                          "description": "Qui eaque voluptate non vero quaerat veniam quod.",
+                          "status": "done",
+                          "priority": 2,
+                          "createdAt": "2023-04-12 16:49:49",
+                          "completedAt": "2023-04-12 16:49:49",
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": []
+                        },
+                        {
+                          "id": 5,
+                          "title": "Prof.",
+                          "description": "Reprehenderit quia nemo aut laboriosam.",
+                          "status": "done",
+                          "priority": 2,
+                          "createdAt": "2023-05-12 16:49:49",
+                          "completedAt": "2023-05-12 16:49:49",
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": []
+                        },
+                        {
+                          "id": 6,
+                          "title": "Dr.",
+                          "description": "Maiores recusandae nisi pariatur reprehenderit.",
+                          "status": "done",
+                          "priority": 3,
+                          "createdAt": "2023-06-12 16:49:49",
+                          "completedAt": "2023-06-12 16:49:49",
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": []
+                        },
+                        {
+                          "id": 7,
+                          "title": "Mrs.",
+                          "description": "Iste natus quas et nesciunt provident et.",
+                          "status": "done",
+                          "priority": 2,
+                          "createdAt": "2023-07-12 16:49:49",
+                          "completedAt": "2023-07-12 16:49:49",
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": []
+                        },
+                        {
+                          "id": 8,
+                          "title": "Prof.",
+                          "description": "Rerum nisi rerum veniam ipsum pariatur.",
+                          "status": "todo",
+                          "priority": 3,
+                          "createdAt": "2023-08-12 16:49:49",
+                          "completedAt": "2023-08-12 16:49:49",
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": []
+                        },
+                        {
+                          "id": 13,
+                          "title": "sub task",
+                          "description": "description",
+                          "status": "todo",
+                          "priority": 1,
+                          "createdAt": "2023-11-12 18:39:43",
+                          "completedAt": null,
+                          "userId": 2,
+                          "taskId": 12,
+                          "tasks": []
+                        }
+                      ]
+                    }
+                  }
+                },
+                "examples": {
+                  "Successful example": {
+                    "value": {
+                      "status": "success",
+                      "data": [
+                        {
+                          "id": 12,
+                          "title": "sub task1",
+                          "description": "description",
+                          "status": "todo",
+                          "priority": 1,
+                          "createdAt": "2023-11-12 18:37:44",
+                          "completedAt": null,
+                          "userId": 2,
+                          "taskId": null,
+                          "tasks": [
+                            {
+                              "id": 13,
+                              "title": "sub task",
+                              "description": "description",
+                              "status": "todo",
+                              "priority": 1,
+                              "createdAt": "2023-11-12 18:39:43",
+                              "completedAt": null,
+                              "userId": 2,
+                              "taskId": 12,
+                              "tasks": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": 1,
+                          "title": "Dr.",
+                          "description": "Earum et consequuntur delectus.",
+                          "status": "todo",
+                          "priority": 1,
+                          "createdAt": "2023-01-12 16:49:49",
+                          "completedAt": "2023-01-12 16:49:49",
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": []
+                        },
+                        {
+                          "id": 2,
+                          "title": "Prof.",
+                          "description": "Alias eum blanditiis inventore.",
+                          "status": "todo",
+                          "priority": 1,
+                          "createdAt": "2023-02-12 16:49:49",
+                          "completedAt": "2023-02-12 16:49:49",
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": []
+                        },
+                        {
+                          "id": 3,
+                          "title": "Ms.",
+                          "description": "Quis ut veniam tempora blanditiis sit assumenda.",
+                          "status": "done",
+                          "priority": 1,
+                          "createdAt": "2023-03-12 16:49:49",
+                          "completedAt": "2023-03-12 16:49:49",
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": []
+                        },
+                        {
+                          "id": 4,
+                          "title": "Ms.",
+                          "description": "Qui eaque voluptate non vero quaerat veniam quod.",
+                          "status": "done",
+                          "priority": 2,
+                          "createdAt": "2023-04-12 16:49:49",
+                          "completedAt": "2023-04-12 16:49:49",
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": []
+                        },
+                        {
+                          "id": 5,
+                          "title": "Prof.",
+                          "description": "Reprehenderit quia nemo aut laboriosam.",
+                          "status": "done",
+                          "priority": 2,
+                          "createdAt": "2023-05-12 16:49:49",
+                          "completedAt": "2023-05-12 16:49:49",
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": []
+                        },
+                        {
+                          "id": 6,
+                          "title": "Dr.",
+                          "description": "Maiores recusandae nisi pariatur reprehenderit.",
+                          "status": "done",
+                          "priority": 3,
+                          "createdAt": "2023-06-12 16:49:49",
+                          "completedAt": "2023-06-12 16:49:49",
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": []
+                        },
+                        {
+                          "id": 7,
+                          "title": "Mrs.",
+                          "description": "Iste natus quas et nesciunt provident et.",
+                          "status": "done",
+                          "priority": 2,
+                          "createdAt": "2023-07-12 16:49:49",
+                          "completedAt": "2023-07-12 16:49:49",
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": []
+                        },
+                        {
+                          "id": 8,
+                          "title": "Prof.",
+                          "description": "Rerum nisi rerum veniam ipsum pariatur.",
+                          "status": "todo",
+                          "priority": 3,
+                          "createdAt": "2023-08-12 16:49:49",
+                          "completedAt": "2023-08-12 16:49:49",
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": []
+                        },
+                        {
+                          "id": 13,
+                          "title": "sub task",
+                          "description": "description",
+                          "status": "todo",
+                          "priority": 1,
+                          "createdAt": "2023-11-12 18:39:43",
+                          "completedAt": null,
+                          "userId": 2,
+                          "taskId": 12,
+                          "tasks": []
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "operationId": "get-tasks",
+        "description": "Get tasks list",
+        "security": [
+          {
+            "Authorization": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "Store task",
+        "operationId": "post-tasks",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Successful example": {
+                    "value": {
+                      "status": "success"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Tasks"
+        ],
+        "description": "Store one task",
+        "security": [
+          {
+            "Authorization": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "x-examples": {
+                  "Example 1": {
+                    "title": "sub task",
+                    "description": "description",
+                    "status": "todo",
+                    "priority": "1",
+                    "taskId": 1,
+                    "completedAt": ""
+                  }
+                },
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "status": {
+                    "type": "string"
+                  },
+                  "priority": {
+                    "type": "integer"
+                  },
+                  "taskId": {
+                    "type": "integer",
+                    "nullable": true
+                  },
+                  "completedAt": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                }
+              },
+              "examples": {
+                "Create uncompleted task": {
+                  "value": {
+                    "title": "task",
+                    "description": "desc",
+                    "status": "todo",
+                    "priority": 1
+                  }
+                },
+                "Create completed task": {
+                  "value": {
+                    "title": "task",
+                    "description": "desc",
+                    "status": "done",
+                    "priority": 1,
+                    "completedAt": "2023-05-12 16:49:49"
+                  }
+                },
+                "Create uncompleted subtask": {
+                  "value": {
+                    "title": "sub task",
+                    "description": "desc",
+                    "status": "todo",
+                    "priority": 2,
+                    "taskId": 1
+                  }
+                },
+                "Create completed subtask": {
+                  "value": {
+                    "title": "sub task",
+                    "description": "desc",
+                    "status": "done",
+                    "priority": 2,
+                    "taskId": 1,
+                    "completedAt": "2023-05-12 16:49:49"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/tasks/{id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "id",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Show one task",
+        "tags": [
+          "Tasks"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "title": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "string"
+                        },
+                        "priority": {
+                          "type": "integer"
+                        },
+                        "createdAt": {
+                          "type": "string"
+                        },
+                        "completedAt": {
+                          "type": "null"
+                        },
+                        "userId": {
+                          "type": "integer"
+                        },
+                        "taskId": {
+                          "type": "null"
+                        },
+                        "tasks": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "id": {
+                                "type": "integer"
+                              },
+                              "title": {
+                                "type": "string"
+                              },
+                              "description": {
+                                "type": "string"
+                              },
+                              "status": {
+                                "type": "string"
+                              },
+                              "priority": {
+                                "type": "integer"
+                              },
+                              "createdAt": {
+                                "type": "string"
+                              },
+                              "completedAt": {
+                                "type": "null"
+                              },
+                              "userId": {
+                                "type": "integer"
+                              },
+                              "taskId": {
+                                "type": "integer"
+                              },
+                              "tasks": {
+                                "type": "array",
+                                "items": {
+                                  "type": "object",
+                                  "properties": {}
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "x-examples": {
+                    "Example 1": {
+                      "status": "success",
+                      "data": {
+                        "id": 12,
+                        "title": "sub task1",
+                        "description": "description",
+                        "status": "todo",
+                        "priority": 1,
+                        "createdAt": "2023-11-12 18:37:44",
+                        "completedAt": null,
+                        "userId": 2,
+                        "taskId": null,
+                        "tasks": [
+                          {
+                            "id": 13,
+                            "title": "sub task",
+                            "description": "description",
+                            "status": "todo",
+                            "priority": 1,
+                            "createdAt": "2023-11-12 18:39:43",
+                            "completedAt": null,
+                            "userId": 2,
+                            "taskId": 12,
+                            "tasks": []
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Successful example": {
+                    "value": {
+                      "status": "success",
+                      "data": {
+                        "id": 12,
+                        "title": "sub task1",
+                        "description": "description",
+                        "status": "todo",
+                        "priority": 1,
+                        "createdAt": "2023-11-12 18:37:44",
+                        "completedAt": null,
+                        "userId": 2,
+                        "taskId": null,
+                        "tasks": [
+                          {
+                            "id": 13,
+                            "title": "sub task",
+                            "description": "description",
+                            "status": "todo",
+                            "priority": 1,
+                            "createdAt": "2023-11-12 18:39:43",
+                            "completedAt": null,
+                            "userId": 2,
+                            "taskId": 12,
+                            "tasks": []
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-tasks-id",
+        "security": [
+          {
+            "Authorization": []
+          }
+        ]
+      },
+      "put": {
+        "summary": "Update task",
+        "operationId": "put-tasks-id",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "x-examples": {
+                    "Example 1": {
+                      "status": "success",
+                      "data": {
+                        "id": 12,
+                        "title": "sub task1",
+                        "description": "description",
+                        "status": "todo",
+                        "priority": "1",
+                        "createdAt": "2023-11-12 18:37:44",
+                        "completedAt": "2023-06-12 16:49:49",
+                        "userId": 2,
+                        "taskId": null
+                      }
+                    }
+                  },
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "title": {
+                          "type": "string"
+                        },
+                        "description": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "string"
+                        },
+                        "priority": {
+                          "type": "string"
+                        },
+                        "createdAt": {
+                          "type": "string"
+                        },
+                        "completedAt": {
+                          "type": "string",
+                          "nullable": true
+                        },
+                        "taskId": {
+                          "type": "integer",
+                          "nullable": true
+                        },
+                        "userId": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Successful example": {
+                    "value": {
+                      "status": "success",
+                      "data": {
+                        "id": 12,
+                        "title": "sub task",
+                        "description": "description",
+                        "status": "todo",
+                        "priority": "1",
+                        "createdAt": "2023-11-12 18:37:44",
+                        "completedAt": "2023-06-12 16:49:49",
+                        "userId": 2,
+                        "taskId": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "tags": [
+          "Tasks"
+        ],
+        "security": [
+          {
+            "Authorization": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "x-examples": {
+                  "Example 1": {
+                    "id": 12,
+                    "title": "sub task13",
+                    "description": "description",
+                    "status": "todo",
+                    "priority": "1",
+                    "completedAt": "2023-06-12 16:49:49",
+                    "taskId": 1
+                  }
+                },
+                "properties": {
+                  "title": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "priority": {
+                    "type": "integer"
+                  },
+                  "completedAt": {
+                    "type": "string"
+                  },
+                  "taskId": {
+                    "type": "integer",
+                    "nullable": true
+                  }
+                }
+              },
+              "examples": {
+                "Update task": {
+                  "value": {
+                    "title": "task",
+                    "description": "description",
+                    "priority": 1,
+                    "completedAt": "2023-06-12 16:49:49"
+                  }
+                },
+                "Update task and make as sub-task": {
+                  "value": {
+                    "title": "subtask",
+                    "description": "desc",
+                    "priority": 1,
+                    "completedAt": "2023-06-12 16:49:49",
+                    "taskId": 1
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete task",
+        "operationId": "delete-tasks-id",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Successful example": {
+                    "value": {
+                      "status": "success"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "tags": [
+          "Tasks"
+        ],
+        "security": [
+          {
+            "Authorization": []
+          }
+        ],
+        "description": "Delete one task"
+      }
+    },
+    "/tasks/{id}/update-status": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "id",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "Update task status",
+        "operationId": "put-tasks-id-update-status",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Successful example": {
+                    "value": {
+                      "status": "success"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Forbidden": {
+                    "value": {
+                      "message": "Cannot set status to \"done\" because there are subtasks with status \"todo\"."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "security": [
+          {
+            "Authorization": []
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "status": {
+                    "type": "string"
+                  }
+                },
+                "x-examples": {
+                  "Example 1": {
+                    "id": 12,
+                    "status": "done"
+                  }
+                }
+              },
+              "examples": {
+                "Update status example": {
+                  "value": {
+                    "id": 1,
+                    "status": "done"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "description": "Get update tasks status"
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "Authorization": {
+        "name": "Bearer",
+        "type": "apiKey",
+        "in": "header"
+      }
+    }
+  }
+}

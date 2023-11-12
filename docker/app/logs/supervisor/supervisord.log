@@ -1,0 +1,262 @@
+2023-10-17 10:37:24,849 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-17 10:37:24,850 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-17 10:37:24,850 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-17 10:37:24,857 INFO RPC interface 'supervisor' initialized
+2023-10-17 10:37:24,858 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-17 10:37:24,858 INFO supervisord started with pid 1
+2023-10-17 10:37:25,862 INFO spawned: 'didido' with pid 7
+2023-10-17 10:37:26,863 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-18 10:09:38,594 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-18 10:09:38,602 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-18 10:09:38,602 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-18 10:09:38,728 INFO RPC interface 'supervisor' initialized
+2023-10-18 10:09:38,729 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-18 10:09:38,732 INFO supervisord started with pid 1
+2023-10-18 10:09:39,737 INFO spawned: 'didido' with pid 7
+2023-10-18 10:09:40,739 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-18 12:53:20,303 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-18 12:53:20,304 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-18 12:53:20,304 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-18 12:53:20,309 INFO RPC interface 'supervisor' initialized
+2023-10-18 12:53:20,309 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-18 12:53:20,310 INFO supervisord started with pid 1
+2023-10-18 12:53:21,314 INFO spawned: 'didido' with pid 6
+2023-10-18 12:53:22,317 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-19 09:30:01,051 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-19 09:30:01,051 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-19 09:30:01,052 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-19 09:30:01,058 INFO RPC interface 'supervisor' initialized
+2023-10-19 09:30:01,058 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-19 09:30:01,059 INFO supervisord started with pid 1
+2023-10-19 09:30:02,064 INFO spawned: 'didido' with pid 7
+2023-10-19 09:30:03,067 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-20 10:03:18,920 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-20 10:03:18,924 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-20 10:03:18,924 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-20 10:03:19,269 INFO RPC interface 'supervisor' initialized
+2023-10-20 10:03:19,270 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-20 10:03:19,270 INFO supervisord started with pid 1
+2023-10-20 10:03:20,274 INFO spawned: 'didido' with pid 8
+2023-10-20 10:03:21,294 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-20 15:47:27,330 WARN received SIGQUIT indicating exit request
+2023-10-20 15:47:27,370 INFO waiting for didido to die
+2023-10-20 15:47:27,769 INFO stopped: didido (exit status 0)
+2023-10-23 08:25:58,822 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-23 08:25:58,823 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-23 08:25:58,823 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-23 08:25:58,835 INFO RPC interface 'supervisor' initialized
+2023-10-23 08:25:58,835 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-23 08:25:58,836 INFO supervisord started with pid 1
+2023-10-23 08:25:59,839 INFO spawned: 'didido' with pid 7
+2023-10-23 08:26:00,841 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-23 08:36:17,074 WARN exited: didido (terminated by SIGKILL; not expected)
+2023-10-23 08:36:18,078 INFO spawned: 'didido' with pid 16
+2023-10-23 08:36:19,081 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-23 09:53:59,919 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-23 09:53:59,923 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-23 09:53:59,923 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-23 09:54:00,237 INFO RPC interface 'supervisor' initialized
+2023-10-23 09:54:00,238 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-23 09:54:00,238 INFO supervisord started with pid 1
+2023-10-23 09:54:01,242 INFO spawned: 'didido' with pid 7
+2023-10-23 09:54:02,244 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-23 10:53:35,803 WARN received SIGQUIT indicating exit request
+2023-10-23 10:53:35,805 INFO waiting for didido to die
+2023-10-23 10:53:35,836 INFO stopped: didido (exit status 0)
+2023-10-23 10:53:45,365 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-23 10:53:45,365 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-23 10:53:45,365 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-23 10:53:45,370 INFO RPC interface 'supervisor' initialized
+2023-10-23 10:53:45,370 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-23 10:53:45,371 INFO supervisord started with pid 1
+2023-10-23 10:53:46,374 INFO spawned: 'didido' with pid 7
+2023-10-23 10:53:47,376 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-24 09:34:47,943 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-24 09:34:47,944 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-24 09:34:47,944 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-24 09:34:48,254 INFO RPC interface 'supervisor' initialized
+2023-10-24 09:34:48,255 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-24 09:34:48,255 INFO supervisord started with pid 1
+2023-10-24 09:34:49,260 INFO spawned: 'didido' with pid 6
+2023-10-24 09:34:50,264 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-24 11:13:18,674 WARN received SIGQUIT indicating exit request
+2023-10-24 11:13:18,675 INFO waiting for didido to die
+2023-10-24 11:13:18,711 INFO stopped: didido (exit status 0)
+2023-10-24 12:16:24,774 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-24 12:16:24,774 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-24 12:16:24,774 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-24 12:16:24,787 INFO RPC interface 'supervisor' initialized
+2023-10-24 12:16:24,788 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-24 12:16:24,790 INFO supervisord started with pid 1
+2023-10-24 12:16:25,793 INFO spawned: 'didido' with pid 8
+2023-10-24 12:16:26,796 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-24 14:27:15,252 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-24 14:27:15,253 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-24 14:27:15,254 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-24 14:27:15,284 INFO RPC interface 'supervisor' initialized
+2023-10-24 14:27:15,284 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-24 14:27:15,285 INFO supervisord started with pid 1
+2023-10-24 14:27:16,290 INFO spawned: 'didido' with pid 8
+2023-10-24 14:27:17,293 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-24 20:24:36,024 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-24 20:24:36,025 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-24 20:24:36,025 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-24 20:24:36,046 INFO RPC interface 'supervisor' initialized
+2023-10-24 20:24:36,046 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-24 20:24:36,047 INFO supervisord started with pid 1
+2023-10-24 20:24:37,052 INFO spawned: 'didido' with pid 7
+2023-10-24 20:24:38,062 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-24 20:25:08,097 WARN received SIGQUIT indicating exit request
+2023-10-24 20:25:08,098 INFO waiting for didido to die
+2023-10-24 20:25:08,195 INFO stopped: didido (exit status 0)
+2023-10-25 07:59:41,277 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-25 07:59:41,277 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-25 07:59:41,278 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-25 07:59:41,285 INFO RPC interface 'supervisor' initialized
+2023-10-25 07:59:41,285 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-25 07:59:41,286 INFO supervisord started with pid 1
+2023-10-25 07:59:42,289 INFO spawned: 'didido' with pid 7
+2023-10-25 07:59:43,291 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-25 12:18:22,065 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-25 12:18:22,066 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-25 12:18:22,067 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-25 12:18:22,424 INFO RPC interface 'supervisor' initialized
+2023-10-25 12:18:22,431 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-25 12:18:22,431 INFO supervisord started with pid 1
+2023-10-25 12:18:23,435 INFO spawned: 'didido' with pid 7
+2023-10-25 12:18:24,443 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-25 14:22:34,745 WARN received SIGQUIT indicating exit request
+2023-10-25 14:22:34,746 INFO waiting for didido to die
+2023-10-25 14:22:34,776 INFO stopped: didido (exit status 0)
+2023-10-25 14:22:47,065 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-25 14:22:47,065 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-25 14:22:47,065 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-25 14:22:47,070 INFO RPC interface 'supervisor' initialized
+2023-10-25 14:22:47,070 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-25 14:22:47,071 INFO supervisord started with pid 1
+2023-10-25 14:22:48,075 INFO spawned: 'didido' with pid 7
+2023-10-25 14:22:49,078 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-25 14:35:28,062 WARN received SIGQUIT indicating exit request
+2023-10-25 14:35:28,062 INFO waiting for didido to die
+2023-10-25 14:35:28,080 INFO stopped: didido (exit status 0)
+2023-10-25 14:35:32,377 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-25 14:35:32,377 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-25 14:35:32,378 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-25 14:35:32,385 INFO RPC interface 'supervisor' initialized
+2023-10-25 14:35:32,386 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-25 14:35:32,386 INFO supervisord started with pid 1
+2023-10-25 14:35:33,392 INFO spawned: 'didido' with pid 7
+2023-10-25 14:35:34,395 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-26 08:41:07,172 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-26 08:41:07,173 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-26 08:41:07,173 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-26 08:41:07,483 INFO RPC interface 'supervisor' initialized
+2023-10-26 08:41:07,484 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-26 08:41:07,484 INFO supervisord started with pid 1
+2023-10-26 08:41:08,490 INFO spawned: 'didido' with pid 7
+2023-10-26 08:41:09,493 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-26 08:41:29,516 WARN received SIGQUIT indicating exit request
+2023-10-26 08:41:29,516 INFO waiting for didido to die
+2023-10-26 08:41:29,548 INFO stopped: didido (exit status 0)
+2023-10-27 13:31:20,568 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-10-27 13:31:20,593 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-10-27 13:31:20,593 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-10-27 13:31:20,608 INFO RPC interface 'supervisor' initialized
+2023-10-27 13:31:20,608 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-10-27 13:31:20,609 INFO supervisord started with pid 1
+2023-10-27 13:31:21,612 INFO spawned: 'didido' with pid 8
+2023-10-27 13:31:22,615 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-10-27 13:38:11,139 WARN received SIGQUIT indicating exit request
+2023-10-27 13:38:11,140 INFO waiting for didido to die
+2023-10-27 13:38:11,156 INFO stopped: didido (exit status 0)
+2023-11-01 10:11:22,292 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-11-01 10:11:22,293 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-11-01 10:11:22,294 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-11-01 10:11:22,307 INFO RPC interface 'supervisor' initialized
+2023-11-01 10:11:22,307 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-11-01 10:11:22,308 INFO supervisord started with pid 1
+2023-11-01 10:11:23,319 INFO spawned: 'didido' with pid 8
+2023-11-01 10:11:24,322 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-11-01 10:36:11,113 WARN received SIGQUIT indicating exit request
+2023-11-01 10:36:11,114 INFO waiting for didido to die
+2023-11-01 10:36:14,118 INFO waiting for didido to die
+2023-11-01 10:36:17,122 INFO waiting for didido to die
+2023-11-01 10:36:20,122 INFO waiting for didido to die
+2023-11-01 18:56:13,057 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-11-01 18:56:13,058 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-11-01 18:56:13,058 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-11-01 18:56:13,066 INFO RPC interface 'supervisor' initialized
+2023-11-01 18:56:13,066 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-11-01 18:56:13,067 INFO supervisord started with pid 1
+2023-11-01 18:56:14,071 INFO spawned: 'didido' with pid 8
+2023-11-01 18:56:15,074 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-11-01 18:58:02,206 WARN received SIGQUIT indicating exit request
+2023-11-01 18:58:02,206 INFO waiting for didido to die
+2023-11-01 18:58:02,242 INFO stopped: didido (exit status 0)
+2023-11-01 19:41:59,066 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-11-01 19:41:59,066 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-11-01 19:41:59,066 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-11-01 19:41:59,088 INFO RPC interface 'supervisor' initialized
+2023-11-01 19:41:59,088 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-11-01 19:41:59,089 INFO supervisord started with pid 1
+2023-11-01 19:42:00,093 INFO spawned: 'didido' with pid 7
+2023-11-01 19:42:01,095 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-11-01 20:40:08,325 WARN received SIGQUIT indicating exit request
+2023-11-01 20:40:08,345 INFO waiting for didido to die
+2023-11-01 20:40:11,350 INFO waiting for didido to die
+2023-11-01 20:40:11,526 INFO stopped: didido (exit status 0)
+2023-11-02 08:21:40,428 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-11-02 08:21:40,428 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-11-02 08:21:40,428 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-11-02 08:21:40,437 INFO RPC interface 'supervisor' initialized
+2023-11-02 08:21:40,438 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-11-02 08:21:40,439 INFO supervisord started with pid 1
+2023-11-02 08:21:41,442 INFO spawned: 'didido' with pid 7
+2023-11-02 08:21:42,445 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-11-02 08:50:24,507 WARN received SIGQUIT indicating exit request
+2023-11-02 08:50:24,508 INFO waiting for didido to die
+2023-11-02 08:50:24,524 INFO stopped: didido (exit status 0)
+2023-11-06 13:02:52,228 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-11-06 13:02:52,228 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-11-06 13:02:52,228 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-11-06 13:02:52,236 INFO RPC interface 'supervisor' initialized
+2023-11-06 13:02:52,236 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-11-06 13:02:52,236 INFO supervisord started with pid 1
+2023-11-06 13:02:53,240 INFO spawned: 'didido' with pid 7
+2023-11-06 13:02:54,242 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-11-06 13:40:22,971 WARN received SIGQUIT indicating exit request
+2023-11-06 13:40:22,977 INFO waiting for didido to die
+2023-11-06 13:40:23,115 INFO stopped: didido (exit status 0)
+2023-11-09 13:05:52,863 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-11-09 13:05:52,864 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-11-09 13:05:52,864 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-11-09 13:05:52,873 INFO RPC interface 'supervisor' initialized
+2023-11-09 13:05:52,873 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-11-09 13:05:52,873 INFO supervisord started with pid 1
+2023-11-09 13:05:53,876 INFO spawned: 'didido' with pid 8
+2023-11-09 13:05:54,879 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-11-09 14:02:21,002 WARN received SIGQUIT indicating exit request
+2023-11-09 14:02:21,014 INFO waiting for didido to die
+2023-11-09 14:02:21,259 INFO stopped: didido (exit status 0)
+2023-11-10 09:28:14,938 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-11-10 09:28:14,942 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-11-10 09:28:14,942 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-11-10 09:28:14,951 INFO RPC interface 'supervisor' initialized
+2023-11-10 09:28:14,951 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-11-10 09:28:14,951 INFO supervisord started with pid 1
+2023-11-10 09:28:15,959 INFO spawned: 'didido' with pid 8
+2023-11-10 09:28:16,962 INFO success: didido entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-11-10 09:53:53,855 WARN received SIGQUIT indicating exit request
+2023-11-10 09:53:53,856 INFO waiting for didido to die
+2023-11-10 09:53:54,884 INFO stopped: didido (exit status 0)
+2023-11-11 11:56:03,621 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2023-11-11 11:56:03,621 WARN For [program:app-worker], redirect_stderr=true but stderr_logfile has also been set to a filename, the filename has been ignored
+2023-11-11 11:56:03,621 INFO Included extra file "/etc/supervisor/conf.d/supervisor.conf" during parsing
+2023-11-11 11:56:03,628 INFO RPC interface 'supervisor' initialized
+2023-11-11 11:56:03,629 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2023-11-11 11:56:03,629 INFO supervisord started with pid 1
+2023-11-11 11:56:04,632 INFO spawned: 'drum-n-code' with pid 7
+2023-11-11 11:56:05,635 INFO success: drum-n-code entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2023-11-11 12:15:29,033 WARN received SIGQUIT indicating exit request
+2023-11-11 12:15:29,034 INFO waiting for drum-n-code to die
+2023-11-11 12:15:29,049 INFO stopped: drum-n-code (exit status 0)
