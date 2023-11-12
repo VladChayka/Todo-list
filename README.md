@@ -7,7 +7,7 @@
 
 
 ### Base Settings
-1. Run git clone https://github.com/dsswork/rezet.git
+1. Run git clone https://github.com/VladChayka/Todo-list.git
 2. Run cp .env.example .env
 3. Set up your settings in .env:
     - NGINX_CONTAINER_PORT, CURRENT_UID
