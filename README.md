@@ -18,4 +18,3 @@
 7. Run composer install
 8. Run php artisan migrate
 9. Run php artisan passport:install
-10. Run php artisan db:seed
