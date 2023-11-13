@@ -30,4 +30,9 @@ class IndexTaskRequest extends FormRequest
             'sort.*' => ['sometimes', 'string', Rule::in(['asc', 'desc'])]
         ];
     }
+
+    public function validationData()
+    {
+        return array_merge($this->route()->parameters(), $this->all());
+    }
 }

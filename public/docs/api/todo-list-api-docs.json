@@ -526,29 +526,16 @@
                       "status": "success",
                       "data": [
                         {
-                          "id": 12,
-                          "title": "sub task1",
+                          "id": 16,
+                          "title": "sub task",
                           "description": "description",
                           "status": "todo",
                           "priority": 1,
-                          "createdAt": "2023-11-12 18:37:44",
+                          "createdAt": "2023-11-12 20:48:00",
                           "completedAt": null,
                           "userId": 2,
-                          "taskId": null,
-                          "tasks": [
-                            {
-                              "id": 13,
-                              "title": "sub task",
-                              "description": "description",
-                              "status": "todo",
-                              "priority": 1,
-                              "createdAt": "2023-11-12 18:39:43",
-                              "completedAt": null,
-                              "userId": 2,
-                              "taskId": 12,
-                              "tasks": []
-                            }
-                          ]
+                          "taskId": 1,
+                          "tasks": []
                         },
                         {
                           "id": 1,
@@ -560,7 +547,44 @@
                           "completedAt": "2023-01-12 16:49:49",
                           "userId": 1,
                           "taskId": null,
-                          "tasks": []
+                          "tasks": [
+                            {
+                              "id": 16,
+                              "title": "sub task",
+                              "description": "description",
+                              "status": "todo",
+                              "priority": 1,
+                              "createdAt": "2023-11-12 20:48:00",
+                              "completedAt": null,
+                              "userId": 2,
+                              "taskId": 1,
+                              "tasks": []
+                            },
+                            {
+                              "id": 20,
+                              "title": "123",
+                              "description": "description",
+                              "status": "todo",
+                              "priority": 1,
+                              "createdAt": "2023-11-13 08:42:16",
+                              "completedAt": null,
+                              "userId": 2,
+                              "taskId": 1,
+                              "tasks": []
+                            },
+                            {
+                              "id": 21,
+                              "title": "1dsa",
+                              "description": "description",
+                              "status": "todo",
+                              "priority": 1,
+                              "createdAt": "2023-11-13 08:43:06",
+                              "completedAt": null,
+                              "userId": 2,
+                              "taskId": 1,
+                              "tasks": []
+                            }
+                          ]
                         },
                         {
                           "id": 2,
@@ -647,6 +671,31 @@
                           "tasks": []
                         },
                         {
+                          "id": 12,
+                          "title": "sub task134",
+                          "description": "description",
+                          "status": "todo",
+                          "priority": 1,
+                          "createdAt": "2023-11-12 18:37:44",
+                          "completedAt": "2023-06-12 16:49:49",
+                          "userId": 2,
+                          "taskId": null,
+                          "tasks": [
+                            {
+                              "id": 13,
+                              "title": "sub task",
+                              "description": "description",
+                              "status": "todo",
+                              "priority": 1,
+                              "createdAt": "2023-11-12 18:39:43",
+                              "completedAt": null,
+                              "userId": 2,
+                              "taskId": 12,
+                              "tasks": []
+                            }
+                          ]
+                        },
+                        {
                           "id": 13,
                           "title": "sub task",
                           "description": "description",
@@ -656,6 +705,30 @@
                           "completedAt": null,
                           "userId": 2,
                           "taskId": 12,
+                          "tasks": []
+                        },
+                        {
+                          "id": 20,
+                          "title": "123",
+                          "description": "description",
+                          "status": "todo",
+                          "priority": 1,
+                          "createdAt": "2023-11-13 08:42:16",
+                          "completedAt": null,
+                          "userId": 2,
+                          "taskId": 1,
+                          "tasks": []
+                        },
+                        {
+                          "id": 21,
+                          "title": "1dsa",
+                          "description": "description",
+                          "status": "todo",
+                          "priority": 1,
+                          "createdAt": "2023-11-13 08:43:06",
+                          "completedAt": null,
+                          "userId": 2,
+                          "taskId": 1,
                           "tasks": []
                         }
                       ]
@@ -965,6 +1038,18 @@
                 }
               }
             }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         },
         "operationId": "get-tasks-id",
@@ -1269,25 +1354,21 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "integer"
-                  },
-                  "status": {
-                    "type": "string"
-                  }
-                },
                 "x-examples": {
                   "Example 1": {
                     "id": 12,
                     "status": "done"
+                  }
+                },
+                "properties": {
+                  "status": {
+                    "type": "string"
                   }
                 }
               },
               "examples": {
                 "Update status example": {
                   "value": {
-                    "id": 1,
                     "status": "done"
                   }
                 }
@@ -1305,9 +1386,8 @@
   "components": {
     "securitySchemes": {
       "Authorization": {
-        "name": "Bearer",
-        "type": "apiKey",
-        "in": "header"
+        "type": "http",
+        "scheme": "bearer"
       }
     }
   }

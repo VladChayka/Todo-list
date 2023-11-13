@@ -28,4 +28,9 @@ class UpdateTaskRequest extends StoreTaskRequest
             'id' => ['required', 'int'],
         ]);
     }
+
+    public function validationData()
+    {
+        return array_merge($this->route()->parameters(), $this->all());
+    }
 }

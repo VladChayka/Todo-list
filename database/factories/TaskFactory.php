@@ -22,8 +22,7 @@ class TaskFactory extends Factory
             'description' => fake()->text(50),
             'status' => fake()->text(5),
             'priority' => fake()->numberBetween(1, 5),
-            'createdAt' => now(),
-            'completedAt' => now(),
+            'created_at' => now(),
             'user_id' => 1
         ];
     }

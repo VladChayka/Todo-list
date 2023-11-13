@@ -28,4 +28,9 @@ class UpdateTaskStatusRequest extends FormRequest
             'status' => ['required', 'string', Rule::in(TaskStatusEnum::cases())],
         ];
     }
+
+    public function validationData()
+    {
+        return array_merge($this->route()->parameters(), $this->all());
+    }
 }

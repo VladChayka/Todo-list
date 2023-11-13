@@ -35,6 +35,7 @@ class TaskRepository
     {
         $task = Task::query()
             ->with('tasks')
+            ->whereNull('task_id')
             ->findOrFail($request->id);
 
         return $task;

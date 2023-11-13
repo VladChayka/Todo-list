@@ -32,4 +32,9 @@ class StoreTaskRequest extends FormRequest
             'taskId' => ['sometimes', 'int', 'exists:App\Models\Task,id'],
         ];
     }
+
+    public function validationData()
+    {
+        return array_merge($this->route()->parameters(), $this->all());
+    }
 }
