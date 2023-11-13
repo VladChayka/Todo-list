@@ -6,6 +6,9 @@ use App\DTO\TaskData;
 use App\Enum\TaskStatusEnum;
 use App\Filters\TaskFilter;
 use App\Models\Task;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Symfony\Component\HttpFoundation\Response;
@@ -28,7 +31,7 @@ class TaskRepository
         return $tasks;
     }
 
-    public function show($request)
+    public function show($request): Model|Collection|Builder|array|null
     {
         $task = Task::query()
             ->with('tasks')
@@ -37,20 +40,18 @@ class TaskRepository
         return $task;
     }
 
-    public function store($request)
+    public function store($taskData): Task
     {
-        $newTaskData = new TaskData(...$request->validated());
-
         $newTask = new Task();
 
-        $newTask->title = $newTaskData->title;
-        $newTask->description = $newTaskData->description;
-        $newTask->status = $newTaskData->status;
-        $newTask->priority = $newTaskData->priority;
+        $newTask->title = $taskData->title;
+        $newTask->description = $taskData->description;
+        $newTask->status = $taskData->status;
+        $newTask->priority = $taskData->priority;
         $newTask->created_at = now();
-        $newTask->completed_at = $newTaskData->completedAt;
+        $newTask->completed_at = $taskData->completedAt;
         $newTask->user_id = Auth::id();
-        $newTask->task_id = $newTaskData->taskId;
+        $newTask->task_id = $taskData->taskId;
 
         $newTask->save();
 

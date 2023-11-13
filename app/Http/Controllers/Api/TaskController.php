@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\DTO\TaskData;
 use App\Http\Controllers\BaseApiController;
 use App\Http\Requests\Api\GetIdRequest;
 use App\Http\Requests\Api\IndexTaskRequest;
@@ -10,6 +11,7 @@ use App\Http\Requests\Api\UpdateTaskRequest;
 use App\Http\Requests\Api\UpdateTaskStatusRequest;
 use App\Models\Task;
 use App\Services\TaskService;
+use Illuminate\Http\JsonResponse;
 
 class TaskController extends BaseApiController
 {
@@ -21,7 +23,7 @@ class TaskController extends BaseApiController
     /**
      * Display a listing of the resource.
      */
-    public function index(IndexTaskRequest $request)
+    public function index(IndexTaskRequest $request): JsonResponse
     {
         $this->authorize('viewAny', Task::class);
 
@@ -41,9 +43,11 @@ class TaskController extends BaseApiController
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreTaskRequest $request)
+    public function store(StoreTaskRequest $request): JsonResponse
     {
-        $this->taskService->store($request);
+        $taskData = new TaskData(...$request->validated());
+
+        $this->taskService->store($taskData);
 
         return self::successfulResponse();
     }
@@ -51,7 +55,7 @@ class TaskController extends BaseApiController
     /**
      * Display the specified resource.
      */
-    public function show(GetIdRequest $request)
+    public function show(GetIdRequest $request): JsonResponse
     {
         $task = $this->taskService->show($request);
 
@@ -71,7 +75,7 @@ class TaskController extends BaseApiController
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTaskRequest $request)
+    public function update(UpdateTaskRequest $request): JsonResponse
     {
         $task = Task::findOrFail($request->id);
 
@@ -82,7 +86,7 @@ class TaskController extends BaseApiController
         return self::successfulResponseWithData($task);
     }
 
-    public function updateStatus(UpdateTaskStatusRequest $request)
+    public function updateStatus(UpdateTaskStatusRequest $request): JsonResponse
     {
         $task = Task::findOrFail($request->id);
 
@@ -95,7 +99,7 @@ class TaskController extends BaseApiController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(GetIdRequest $request, Task $task)
+    public function destroy(GetIdRequest $request): JsonResponse
     {
         $task = Task::findOrFail($request->id);
 

@@ -5,7 +5,12 @@
     "description": "Api documentation for TODO list",
     "version": "1.0.0"
   },
-  "servers": [],
+  "servers": [
+    {
+      "url": "http://localhost:3056/api",
+      "description": ""
+    }
+  ],
   "paths": {
     "/register": {
       "post": {
@@ -120,7 +125,8 @@
           }
         },
         "description": "Get registration"
-      }
+      },
+      "parameters": []
     },
     "/login": {
       "post": {
@@ -223,7 +229,8 @@
             }
           }
         }
-      }
+      },
+      "parameters": []
     },
     "/logout": {
       "post": {
@@ -268,7 +275,8 @@
             "Authorization": []
           }
         ]
-      }
+      },
+      "parameters": []
     },
     "/tasks": {
       "get": {
@@ -787,7 +795,8 @@
             }
           }
         }
-      }
+      },
+      "parameters": []
     },
     "/tasks/{id}": {
       "parameters": [
@@ -1286,7 +1295,10 @@
             }
           }
         },
-        "description": "Get update tasks status"
+        "description": "Get update tasks status",
+        "tags": [
+          "Tasks"
+        ]
       }
     }
   },
