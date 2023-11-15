@@ -13,13 +13,16 @@ use App\Http\Requests\Api\StoreTaskRequest;
 use App\Http\Requests\Api\UpdateTaskRequest;
 use App\Http\Requests\Api\UpdateTaskStatusRequest;
 use App\Models\Task;
+use App\Repositories\TaskRepository;
 use App\Services\TaskService;
 use Illuminate\Http\JsonResponse;
 
 class TaskController extends BaseApiController
 {
     public function __construct(
-        protected TaskService $taskService
+        protected TaskService    $taskService,
+        protected TaskRepository $taskRepository,
+
     )
     {
     }
@@ -31,7 +34,7 @@ class TaskController extends BaseApiController
     {
         $this->authorize('viewAny', Task::class);
 
-        $tasks = $this->taskService->index();
+        $tasks = $this->taskRepository->index();
 
         return self::successfulResponseWithData($tasks);
     }
@@ -59,12 +62,11 @@ class TaskController extends BaseApiController
     /**
      * Display the specified resource.
      */
-    public function show(GetIdRequest $request, Task $task): JsonResponse
+    public function show(GetIdRequest $request): JsonResponse
     {
-
         $taskId = new GetIdData(...$request->validated());
 
-        $task = $this->taskService->show($taskId, $task);
+        $task = $this->taskRepository->show($taskId);
 
         $this->authorize('view', $task);
 
@@ -89,11 +91,14 @@ class TaskController extends BaseApiController
 
         $this->authorize('update', [$task, $updateTaskData]);
 
-        $task = $this->taskService->update($updateTaskData);
+        $updatedTask = $this->taskService->update($updateTaskData);
 
-        return self::successfulResponseWithData($task);
+        return self::successfulResponseWithData($updatedTask);
     }
 
+    /**
+     * Update task status.
+     */
     public function updateStatus(UpdateTaskStatusRequest $request, Task $task): JsonResponse
     {
         $updateTaskStatusData = new UpdateTaskStatusData(...$request->validated());

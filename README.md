@@ -19,4 +19,5 @@
 8. Run php artisan migrate
 9. Run php artisan db:seed
 10. Run php artisan passport:install
-11. Follow http://localhost:3056 for see API Documentation
+11. Follow http://localhost:NGINX_CONTAINER_PORT for see API Documentation
+12. Credentials for login: email: user@email.com, password: 12341234
