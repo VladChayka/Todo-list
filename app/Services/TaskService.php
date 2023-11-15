@@ -29,7 +29,9 @@ class TaskService
                 $query->whereFullText(['title', 'description'], $search);
             })
             ->filter($this->taskFilter)
-            ->whereNull('task_id')
+            ->when(is_null(request('search')), function ($query) {
+                $query->whereNull('task_id');
+            })
             ->get();
 
         return $this->taskRepository->index($tasks);
