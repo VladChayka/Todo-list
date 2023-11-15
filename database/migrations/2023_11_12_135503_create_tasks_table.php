@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('priority');
             $table->time('created_at');
             $table->time('completed_at')->nullable();
+            $table->fullText(['title', 'description']);
             $table->foreignIdFor(User::class)->nullable()->constrained()->onDelete('cascade');
             $table->foreignIdFor(Task::class)->nullable()->constrained()->onDelete('cascade');
         });

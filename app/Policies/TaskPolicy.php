@@ -34,21 +34,24 @@ class TaskPolicy
     /**
      * Determine whether the user can update the model.
      */
-    public function update(User $user, Task $task): bool
+    public function update(User $user, Task $task, $updateTaskData): bool
     {
+        $task = $task->findOrFail($updateTaskData->id);
         return $user->id === $task->user_id;
     }
 
-    public function updateStatus(User $user, Task $task): bool
+    public function updateStatus(User $user, Task $task, $updateTaskStatusData): bool
     {
+        $task = $task->findOrFail($updateTaskStatusData->id);
         return $user->id === $task->user_id;
     }
 
     /**
      * Determine whether the user can delete the model.
      */
-    public function delete(User $user, Task $task): bool
+    public function delete(User $user, Task $task, $taskId): bool
     {
+        $task = $task->findOrFail($taskId->id);
         return $user->id === $task->user_id;
     }
 

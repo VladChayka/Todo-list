@@ -25,6 +25,7 @@ class IndexTaskRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'search' => ['sometimes', 'string'],
             'filter' => ['sometimes', 'array'],
             'sort' => ['sometimes', 'array', new CheckSortKeysRule(TaskFilter::$sortKeys)],
             'sort.*' => ['sometimes', 'string', Rule::in(['asc', 'desc'])]

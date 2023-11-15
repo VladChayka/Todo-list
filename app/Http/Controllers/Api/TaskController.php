@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\DTO\GetIdData;
 use App\DTO\TaskData;
+use App\DTO\UpdateTaskData;
+use App\DTO\UpdateTaskStatusData;
 use App\Http\Controllers\BaseApiController;
 use App\Http\Requests\Api\GetIdRequest;
 use App\Http\Requests\Api\IndexTaskRequest;
@@ -20,6 +23,7 @@ class TaskController extends BaseApiController
     )
     {
     }
+
     /**
      * Display a listing of the resource.
      */
@@ -55,13 +59,17 @@ class TaskController extends BaseApiController
     /**
      * Display the specified resource.
      */
-    public function show(GetIdRequest $request): JsonResponse
+    public function show(GetIdRequest $request, Task $task): JsonResponse
     {
-        $task = $this->taskService->show($request);
+
+        $taskId = new GetIdData(...$request->validated());
+
+        $task = $this->taskService->show($taskId, $task);
 
         $this->authorize('view', $task);
 
         return self::successfulResponseWithData($task);
+
     }
 
     /**
@@ -75,37 +83,38 @@ class TaskController extends BaseApiController
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTaskRequest $request): JsonResponse
+    public function update(UpdateTaskRequest $request, Task $task): JsonResponse
     {
-        $task = Task::findOrFail($request->id);
+        $updateTaskData = new UpdateTaskData(...$request->validated());
 
-        $this->authorize('update', $task);
+        $this->authorize('update', [$task, $updateTaskData]);
 
-        $task = $this->taskService->update($request);
+        $task = $this->taskService->update($updateTaskData);
 
         return self::successfulResponseWithData($task);
     }
 
-    public function updateStatus(UpdateTaskStatusRequest $request): JsonResponse
+    public function updateStatus(UpdateTaskStatusRequest $request, Task $task): JsonResponse
     {
-        $task = Task::findOrFail($request->id);
+        $updateTaskStatusData = new UpdateTaskStatusData(...$request->validated());
 
-        $this->authorize('updateStatus', $task);
+        $this->authorize('updateStatus', [$task, $updateTaskStatusData]);
 
-        $this->taskService->updateStatus($request);
+        $this->taskService->updateStatus($updateTaskStatusData);
 
         return self::successfulResponse();
     }
+
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(GetIdRequest $request): JsonResponse
+    public function destroy(GetIdRequest $request, Task $task): JsonResponse
     {
-        $task = Task::findOrFail($request->id);
+        $taskId = new GetIdData(...$request->validated());
 
-        $this->authorize('delete', $task);
+        $this->authorize('delete', [$task, $taskId]);
 
-        $this->taskService->destroy($request);
+        $this->taskService->destroy($taskId);
 
         return self::successfulResponse();
     }

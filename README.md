@@ -17,4 +17,6 @@
 6. Run docker exec -it drum-n-code-app bash
 7. Run composer install
 8. Run php artisan migrate
-9. Run php artisan passport:install
+9. Run php artisan db:seed
+10. Run php artisan passport:install
+11. Follow http://localhost:3056 for see API Documentation

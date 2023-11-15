@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enum\TaskStatusEnum;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use function Laravel\Prompts\text;
 
@@ -20,7 +21,7 @@ class TaskFactory extends Factory
         return [
             'title' => fake()->title(),
             'description' => fake()->text(50),
-            'status' => fake()->text(5),
+            'status' => TaskStatusEnum::TODO->value,
             'priority' => fake()->numberBetween(1, 5),
             'created_at' => now(),
             'user_id' => 1

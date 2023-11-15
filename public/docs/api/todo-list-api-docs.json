@@ -319,19 +319,13 @@
                             "type": "string"
                           },
                           "completedAt": {
-                            "type": [
-                              "null",
-                              "string"
-                            ]
+                            "type": "null"
                           },
                           "userId": {
                             "type": "integer"
                           },
                           "taskId": {
-                            "type": [
-                              "integer",
-                              "null"
-                            ]
+                            "type": "null"
                           },
                           "tasks": {
                             "type": "array",
@@ -384,137 +378,369 @@
                       "status": "success",
                       "data": [
                         {
-                          "id": 12,
-                          "title": "sub task1",
-                          "description": "description",
-                          "status": "todo",
-                          "priority": 1,
-                          "createdAt": "2023-11-12 18:37:44",
+                          "id": 1,
+                          "title": "Dr.",
+                          "description": "Et consequatur dolorum molestiae aut temporibus.",
+                          "status": "Aut.",
+                          "priority": 2,
+                          "createdAt": "18:40:36",
                           "completedAt": null,
-                          "userId": 2,
+                          "userId": 1,
                           "taskId": null,
                           "tasks": [
                             {
-                              "id": 13,
-                              "title": "sub task",
-                              "description": "description",
-                              "status": "todo",
+                              "id": 2,
+                              "title": "Ms.",
+                              "description": "Consequatur iure vel voluptatem nihil.",
+                              "status": "Est.",
                               "priority": 1,
-                              "createdAt": "2023-11-12 18:39:43",
+                              "createdAt": "18:40:36",
                               "completedAt": null,
-                              "userId": 2,
-                              "taskId": 12,
+                              "userId": 1,
+                              "taskId": 1,
+                              "tasks": []
+                            },
+                            {
+                              "id": 3,
+                              "title": "Dr.",
+                              "description": "Voluptates quos enim vel.",
+                              "status": "Aut.",
+                              "priority": 5,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 1,
+                              "tasks": []
+                            },
+                            {
+                              "id": 4,
+                              "title": "Miss",
+                              "description": "Eum aut est eveniet iusto tempora.",
+                              "status": "Et.",
+                              "priority": 4,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 1,
+                              "tasks": []
+                            },
+                            {
+                              "id": 5,
+                              "title": "Dr.",
+                              "description": "Illo eveniet delectus et accusantium.",
+                              "status": "Iure.",
+                              "priority": 1,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 1,
+                              "tasks": []
+                            },
+                            {
+                              "id": 6,
+                              "title": "Dr.",
+                              "description": "Odio ullam aut provident et et quos at.",
+                              "status": "Quis.",
+                              "priority": 3,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 1,
                               "tasks": []
                             }
                           ]
                         },
                         {
-                          "id": 1,
-                          "title": "Dr.",
-                          "description": "Earum et consequuntur delectus.",
-                          "status": "todo",
-                          "priority": 1,
-                          "createdAt": "2023-01-12 16:49:49",
-                          "completedAt": "2023-01-12 16:49:49",
-                          "userId": 1,
-                          "taskId": null,
-                          "tasks": []
-                        },
-                        {
-                          "id": 2,
-                          "title": "Prof.",
-                          "description": "Alias eum blanditiis inventore.",
-                          "status": "todo",
-                          "priority": 1,
-                          "createdAt": "2023-02-12 16:49:49",
-                          "completedAt": "2023-02-12 16:49:49",
-                          "userId": 1,
-                          "taskId": null,
-                          "tasks": []
-                        },
-                        {
-                          "id": 3,
-                          "title": "Ms.",
-                          "description": "Quis ut veniam tempora blanditiis sit assumenda.",
-                          "status": "done",
-                          "priority": 1,
-                          "createdAt": "2023-03-12 16:49:49",
-                          "completedAt": "2023-03-12 16:49:49",
-                          "userId": 1,
-                          "taskId": null,
-                          "tasks": []
-                        },
-                        {
-                          "id": 4,
-                          "title": "Ms.",
-                          "description": "Qui eaque voluptate non vero quaerat veniam quod.",
-                          "status": "done",
-                          "priority": 2,
-                          "createdAt": "2023-04-12 16:49:49",
-                          "completedAt": "2023-04-12 16:49:49",
-                          "userId": 1,
-                          "taskId": null,
-                          "tasks": []
-                        },
-                        {
-                          "id": 5,
-                          "title": "Prof.",
-                          "description": "Reprehenderit quia nemo aut laboriosam.",
-                          "status": "done",
-                          "priority": 2,
-                          "createdAt": "2023-05-12 16:49:49",
-                          "completedAt": "2023-05-12 16:49:49",
-                          "userId": 1,
-                          "taskId": null,
-                          "tasks": []
-                        },
-                        {
-                          "id": 6,
-                          "title": "Dr.",
-                          "description": "Maiores recusandae nisi pariatur reprehenderit.",
-                          "status": "done",
-                          "priority": 3,
-                          "createdAt": "2023-06-12 16:49:49",
-                          "completedAt": "2023-06-12 16:49:49",
-                          "userId": 1,
-                          "taskId": null,
-                          "tasks": []
-                        },
-                        {
                           "id": 7,
-                          "title": "Mrs.",
-                          "description": "Iste natus quas et nesciunt provident et.",
-                          "status": "done",
-                          "priority": 2,
-                          "createdAt": "2023-07-12 16:49:49",
-                          "completedAt": "2023-07-12 16:49:49",
-                          "userId": 1,
-                          "taskId": null,
-                          "tasks": []
-                        },
-                        {
-                          "id": 8,
-                          "title": "Prof.",
-                          "description": "Rerum nisi rerum veniam ipsum pariatur.",
-                          "status": "todo",
+                          "title": "Dr.",
+                          "description": "Deleniti aut illum et ratione atque at expedita.",
+                          "status": "Quam.",
                           "priority": 3,
-                          "createdAt": "2023-08-12 16:49:49",
-                          "completedAt": "2023-08-12 16:49:49",
+                          "createdAt": "18:40:36",
+                          "completedAt": null,
                           "userId": 1,
                           "taskId": null,
-                          "tasks": []
+                          "tasks": [
+                            {
+                              "id": 8,
+                              "title": "Dr.",
+                              "description": "Consequatur earum quod nisi totam et odit sunt.",
+                              "status": "Et.",
+                              "priority": 4,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 7,
+                              "tasks": []
+                            },
+                            {
+                              "id": 9,
+                              "title": "Dr.",
+                              "description": "Totam esse laborum consequatur magni.",
+                              "status": "Et.",
+                              "priority": 1,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 7,
+                              "tasks": []
+                            },
+                            {
+                              "id": 10,
+                              "title": "Mr.",
+                              "description": "Est beatae at nostrum sequi laboriosam qui.",
+                              "status": "Ut.",
+                              "priority": 4,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 7,
+                              "tasks": []
+                            },
+                            {
+                              "id": 11,
+                              "title": "Ms.",
+                              "description": "Ut in voluptatum occaecati nostrum aut ex.",
+                              "status": "Enim.",
+                              "priority": 1,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 7,
+                              "tasks": []
+                            },
+                            {
+                              "id": 12,
+                              "title": "Miss",
+                              "description": "Sunt mollitia molestiae maiores hic.",
+                              "status": "Ex.",
+                              "priority": 3,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 7,
+                              "tasks": []
+                            }
+                          ]
                         },
                         {
                           "id": 13,
-                          "title": "sub task",
-                          "description": "description",
-                          "status": "todo",
-                          "priority": 1,
-                          "createdAt": "2023-11-12 18:39:43",
+                          "title": "Dr.",
+                          "description": "Optio cum laborum ipsa et aperiam commodi.",
+                          "status": "Vel.",
+                          "priority": 2,
+                          "createdAt": "18:40:36",
                           "completedAt": null,
-                          "userId": 2,
-                          "taskId": 12,
-                          "tasks": []
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": [
+                            {
+                              "id": 14,
+                              "title": "Ms.",
+                              "description": "Dolores dolores et iste a at voluptas.",
+                              "status": "Nam.",
+                              "priority": 1,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 13,
+                              "tasks": []
+                            },
+                            {
+                              "id": 15,
+                              "title": "Mrs.",
+                              "description": "Eum cupiditate ut excepturi possimus suscipit.",
+                              "status": "Sed.",
+                              "priority": 4,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 13,
+                              "tasks": []
+                            },
+                            {
+                              "id": 16,
+                              "title": "Mrs.",
+                              "description": "Expedita doloribus laborum nisi nostrum.",
+                              "status": "A.",
+                              "priority": 2,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 13,
+                              "tasks": []
+                            },
+                            {
+                              "id": 17,
+                              "title": "Mr.",
+                              "description": "Sit illo accusamus sed sed.",
+                              "status": "Et.",
+                              "priority": 5,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 13,
+                              "tasks": []
+                            },
+                            {
+                              "id": 18,
+                              "title": "Mr.",
+                              "description": "Non maiores quos quae nihil cupiditate quam.",
+                              "status": "Ut.",
+                              "priority": 5,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 13,
+                              "tasks": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": 19,
+                          "title": "Dr.",
+                          "description": "Est alias ut rem hic.",
+                          "status": "Enim.",
+                          "priority": 4,
+                          "createdAt": "18:40:36",
+                          "completedAt": null,
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": [
+                            {
+                              "id": 20,
+                              "title": "Dr.",
+                              "description": "Est qui necessitatibus vel fugiat molestiae.",
+                              "status": "Quas.",
+                              "priority": 2,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 19,
+                              "tasks": []
+                            },
+                            {
+                              "id": 21,
+                              "title": "Prof.",
+                              "description": "Quasi et accusantium vero aperiam.",
+                              "status": "Et.",
+                              "priority": 1,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 19,
+                              "tasks": []
+                            },
+                            {
+                              "id": 22,
+                              "title": "Prof.",
+                              "description": "Magnam velit rerum dolores placeat iusto et.",
+                              "status": "Id.",
+                              "priority": 5,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 19,
+                              "tasks": []
+                            },
+                            {
+                              "id": 23,
+                              "title": "Prof.",
+                              "description": "Optio ducimus recusandae voluptatem sit.",
+                              "status": "In.",
+                              "priority": 3,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 19,
+                              "tasks": []
+                            },
+                            {
+                              "id": 24,
+                              "title": "Ms.",
+                              "description": "Iusto est ullam dolores et officiis in sint.",
+                              "status": "Qui.",
+                              "priority": 2,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 19,
+                              "tasks": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": 25,
+                          "title": "Prof.",
+                          "description": "Quo ex delectus consectetur deserunt hic.",
+                          "status": "Sunt.",
+                          "priority": 1,
+                          "createdAt": "18:40:36",
+                          "completedAt": null,
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": [
+                            {
+                              "id": 26,
+                              "title": "Miss",
+                              "description": "Minus et quos asperiores vero nihil laboriosam.",
+                              "status": "Hic.",
+                              "priority": 1,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 25,
+                              "tasks": []
+                            },
+                            {
+                              "id": 27,
+                              "title": "Dr.",
+                              "description": "Aut dolores voluptatem blanditiis eum.",
+                              "status": "Est.",
+                              "priority": 4,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 25,
+                              "tasks": []
+                            },
+                            {
+                              "id": 28,
+                              "title": "Mr.",
+                              "description": "Labore aliquid nobis deserunt.",
+                              "status": "Enim.",
+                              "priority": 4,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 25,
+                              "tasks": []
+                            },
+                            {
+                              "id": 29,
+                              "title": "Dr.",
+                              "description": "Culpa beatae id qui eaque.",
+                              "status": "Ad.",
+                              "priority": 5,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 25,
+                              "tasks": []
+                            },
+                            {
+                              "id": 30,
+                              "title": "Dr.",
+                              "description": "Suscipit voluptatibus incidunt quod hic sed.",
+                              "status": "Quod.",
+                              "priority": 2,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 25,
+                              "tasks": []
+                            }
+                          ]
                         }
                       ]
                     }
@@ -526,210 +752,369 @@
                       "status": "success",
                       "data": [
                         {
-                          "id": 16,
-                          "title": "sub task",
-                          "description": "description",
-                          "status": "todo",
-                          "priority": 1,
-                          "createdAt": "2023-11-12 20:48:00",
-                          "completedAt": null,
-                          "userId": 2,
-                          "taskId": 1,
-                          "tasks": []
-                        },
-                        {
                           "id": 1,
                           "title": "Dr.",
-                          "description": "Earum et consequuntur delectus.",
-                          "status": "todo",
-                          "priority": 1,
-                          "createdAt": "2023-01-12 16:49:49",
-                          "completedAt": "2023-01-12 16:49:49",
+                          "description": "Et consequatur dolorum molestiae aut temporibus.",
+                          "status": "Aut.",
+                          "priority": 2,
+                          "createdAt": "18:40:36",
+                          "completedAt": null,
                           "userId": 1,
                           "taskId": null,
                           "tasks": [
                             {
-                              "id": 16,
-                              "title": "sub task",
-                              "description": "description",
-                              "status": "todo",
+                              "id": 2,
+                              "title": "Ms.",
+                              "description": "Consequatur iure vel voluptatem nihil.",
+                              "status": "Est.",
                               "priority": 1,
-                              "createdAt": "2023-11-12 20:48:00",
+                              "createdAt": "18:40:36",
                               "completedAt": null,
-                              "userId": 2,
+                              "userId": 1,
                               "taskId": 1,
                               "tasks": []
                             },
                             {
-                              "id": 20,
-                              "title": "123",
-                              "description": "description",
-                              "status": "todo",
-                              "priority": 1,
-                              "createdAt": "2023-11-13 08:42:16",
+                              "id": 3,
+                              "title": "Dr.",
+                              "description": "Voluptates quos enim vel.",
+                              "status": "Aut.",
+                              "priority": 5,
+                              "createdAt": "18:40:36",
                               "completedAt": null,
-                              "userId": 2,
+                              "userId": 1,
                               "taskId": 1,
                               "tasks": []
                             },
                             {
-                              "id": 21,
-                              "title": "1dsa",
-                              "description": "description",
-                              "status": "todo",
-                              "priority": 1,
-                              "createdAt": "2023-11-13 08:43:06",
+                              "id": 4,
+                              "title": "Miss",
+                              "description": "Eum aut est eveniet iusto tempora.",
+                              "status": "Et.",
+                              "priority": 4,
+                              "createdAt": "18:40:36",
                               "completedAt": null,
-                              "userId": 2,
+                              "userId": 1,
+                              "taskId": 1,
+                              "tasks": []
+                            },
+                            {
+                              "id": 5,
+                              "title": "Dr.",
+                              "description": "Illo eveniet delectus et accusantium.",
+                              "status": "Iure.",
+                              "priority": 1,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 1,
+                              "tasks": []
+                            },
+                            {
+                              "id": 6,
+                              "title": "Dr.",
+                              "description": "Odio ullam aut provident et et quos at.",
+                              "status": "Quis.",
+                              "priority": 3,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
                               "taskId": 1,
                               "tasks": []
                             }
                           ]
                         },
                         {
-                          "id": 2,
-                          "title": "Prof.",
-                          "description": "Alias eum blanditiis inventore.",
-                          "status": "todo",
-                          "priority": 1,
-                          "createdAt": "2023-02-12 16:49:49",
-                          "completedAt": "2023-02-12 16:49:49",
-                          "userId": 1,
-                          "taskId": null,
-                          "tasks": []
-                        },
-                        {
-                          "id": 3,
-                          "title": "Ms.",
-                          "description": "Quis ut veniam tempora blanditiis sit assumenda.",
-                          "status": "done",
-                          "priority": 1,
-                          "createdAt": "2023-03-12 16:49:49",
-                          "completedAt": "2023-03-12 16:49:49",
-                          "userId": 1,
-                          "taskId": null,
-                          "tasks": []
-                        },
-                        {
-                          "id": 4,
-                          "title": "Ms.",
-                          "description": "Qui eaque voluptate non vero quaerat veniam quod.",
-                          "status": "done",
-                          "priority": 2,
-                          "createdAt": "2023-04-12 16:49:49",
-                          "completedAt": "2023-04-12 16:49:49",
-                          "userId": 1,
-                          "taskId": null,
-                          "tasks": []
-                        },
-                        {
-                          "id": 5,
-                          "title": "Prof.",
-                          "description": "Reprehenderit quia nemo aut laboriosam.",
-                          "status": "done",
-                          "priority": 2,
-                          "createdAt": "2023-05-12 16:49:49",
-                          "completedAt": "2023-05-12 16:49:49",
-                          "userId": 1,
-                          "taskId": null,
-                          "tasks": []
-                        },
-                        {
-                          "id": 6,
-                          "title": "Dr.",
-                          "description": "Maiores recusandae nisi pariatur reprehenderit.",
-                          "status": "done",
-                          "priority": 3,
-                          "createdAt": "2023-06-12 16:49:49",
-                          "completedAt": "2023-06-12 16:49:49",
-                          "userId": 1,
-                          "taskId": null,
-                          "tasks": []
-                        },
-                        {
                           "id": 7,
-                          "title": "Mrs.",
-                          "description": "Iste natus quas et nesciunt provident et.",
-                          "status": "done",
-                          "priority": 2,
-                          "createdAt": "2023-07-12 16:49:49",
-                          "completedAt": "2023-07-12 16:49:49",
-                          "userId": 1,
-                          "taskId": null,
-                          "tasks": []
-                        },
-                        {
-                          "id": 8,
-                          "title": "Prof.",
-                          "description": "Rerum nisi rerum veniam ipsum pariatur.",
-                          "status": "todo",
+                          "title": "Dr.",
+                          "description": "Deleniti aut illum et ratione atque at expedita.",
+                          "status": "Quam.",
                           "priority": 3,
-                          "createdAt": "2023-08-12 16:49:49",
-                          "completedAt": "2023-08-12 16:49:49",
+                          "createdAt": "18:40:36",
+                          "completedAt": null,
                           "userId": 1,
-                          "taskId": null,
-                          "tasks": []
-                        },
-                        {
-                          "id": 12,
-                          "title": "sub task134",
-                          "description": "description",
-                          "status": "todo",
-                          "priority": 1,
-                          "createdAt": "2023-11-12 18:37:44",
-                          "completedAt": "2023-06-12 16:49:49",
-                          "userId": 2,
                           "taskId": null,
                           "tasks": [
                             {
-                              "id": 13,
-                              "title": "sub task",
-                              "description": "description",
-                              "status": "todo",
-                              "priority": 1,
-                              "createdAt": "2023-11-12 18:39:43",
+                              "id": 8,
+                              "title": "Dr.",
+                              "description": "Consequatur earum quod nisi totam et odit sunt.",
+                              "status": "Et.",
+                              "priority": 4,
+                              "createdAt": "18:40:36",
                               "completedAt": null,
-                              "userId": 2,
-                              "taskId": 12,
+                              "userId": 1,
+                              "taskId": 7,
+                              "tasks": []
+                            },
+                            {
+                              "id": 9,
+                              "title": "Dr.",
+                              "description": "Totam esse laborum consequatur magni.",
+                              "status": "Et.",
+                              "priority": 1,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 7,
+                              "tasks": []
+                            },
+                            {
+                              "id": 10,
+                              "title": "Mr.",
+                              "description": "Est beatae at nostrum sequi laboriosam qui.",
+                              "status": "Ut.",
+                              "priority": 4,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 7,
+                              "tasks": []
+                            },
+                            {
+                              "id": 11,
+                              "title": "Ms.",
+                              "description": "Ut in voluptatum occaecati nostrum aut ex.",
+                              "status": "Enim.",
+                              "priority": 1,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 7,
+                              "tasks": []
+                            },
+                            {
+                              "id": 12,
+                              "title": "Miss",
+                              "description": "Sunt mollitia molestiae maiores hic.",
+                              "status": "Ex.",
+                              "priority": 3,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 7,
                               "tasks": []
                             }
                           ]
                         },
                         {
                           "id": 13,
-                          "title": "sub task",
-                          "description": "description",
-                          "status": "todo",
-                          "priority": 1,
-                          "createdAt": "2023-11-12 18:39:43",
+                          "title": "Dr.",
+                          "description": "Optio cum laborum ipsa et aperiam commodi.",
+                          "status": "Vel.",
+                          "priority": 2,
+                          "createdAt": "18:40:36",
                           "completedAt": null,
-                          "userId": 2,
-                          "taskId": 12,
-                          "tasks": []
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": [
+                            {
+                              "id": 14,
+                              "title": "Ms.",
+                              "description": "Dolores dolores et iste a at voluptas.",
+                              "status": "Nam.",
+                              "priority": 1,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 13,
+                              "tasks": []
+                            },
+                            {
+                              "id": 15,
+                              "title": "Mrs.",
+                              "description": "Eum cupiditate ut excepturi possimus suscipit.",
+                              "status": "Sed.",
+                              "priority": 4,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 13,
+                              "tasks": []
+                            },
+                            {
+                              "id": 16,
+                              "title": "Mrs.",
+                              "description": "Expedita doloribus laborum nisi nostrum.",
+                              "status": "A.",
+                              "priority": 2,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 13,
+                              "tasks": []
+                            },
+                            {
+                              "id": 17,
+                              "title": "Mr.",
+                              "description": "Sit illo accusamus sed sed.",
+                              "status": "Et.",
+                              "priority": 5,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 13,
+                              "tasks": []
+                            },
+                            {
+                              "id": 18,
+                              "title": "Mr.",
+                              "description": "Non maiores quos quae nihil cupiditate quam.",
+                              "status": "Ut.",
+                              "priority": 5,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 13,
+                              "tasks": []
+                            }
+                          ]
                         },
                         {
-                          "id": 20,
-                          "title": "123",
-                          "description": "description",
-                          "status": "todo",
-                          "priority": 1,
-                          "createdAt": "2023-11-13 08:42:16",
+                          "id": 19,
+                          "title": "Dr.",
+                          "description": "Est alias ut rem hic.",
+                          "status": "Enim.",
+                          "priority": 4,
+                          "createdAt": "18:40:36",
                           "completedAt": null,
-                          "userId": 2,
-                          "taskId": 1,
-                          "tasks": []
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": [
+                            {
+                              "id": 20,
+                              "title": "Dr.",
+                              "description": "Est qui necessitatibus vel fugiat molestiae.",
+                              "status": "Quas.",
+                              "priority": 2,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 19,
+                              "tasks": []
+                            },
+                            {
+                              "id": 21,
+                              "title": "Prof.",
+                              "description": "Quasi et accusantium vero aperiam.",
+                              "status": "Et.",
+                              "priority": 1,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 19,
+                              "tasks": []
+                            },
+                            {
+                              "id": 22,
+                              "title": "Prof.",
+                              "description": "Magnam velit rerum dolores placeat iusto et.",
+                              "status": "Id.",
+                              "priority": 5,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 19,
+                              "tasks": []
+                            },
+                            {
+                              "id": 23,
+                              "title": "Prof.",
+                              "description": "Optio ducimus recusandae voluptatem sit.",
+                              "status": "In.",
+                              "priority": 3,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 19,
+                              "tasks": []
+                            },
+                            {
+                              "id": 24,
+                              "title": "Ms.",
+                              "description": "Iusto est ullam dolores et officiis in sint.",
+                              "status": "Qui.",
+                              "priority": 2,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 19,
+                              "tasks": []
+                            }
+                          ]
                         },
                         {
-                          "id": 21,
-                          "title": "1dsa",
-                          "description": "description",
-                          "status": "todo",
+                          "id": 25,
+                          "title": "Prof.",
+                          "description": "Quo ex delectus consectetur deserunt hic.",
+                          "status": "Sunt.",
                           "priority": 1,
-                          "createdAt": "2023-11-13 08:43:06",
+                          "createdAt": "18:40:36",
                           "completedAt": null,
-                          "userId": 2,
-                          "taskId": 1,
-                          "tasks": []
+                          "userId": 1,
+                          "taskId": null,
+                          "tasks": [
+                            {
+                              "id": 26,
+                              "title": "Miss",
+                              "description": "Minus et quos asperiores vero nihil laboriosam.",
+                              "status": "Hic.",
+                              "priority": 1,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 25,
+                              "tasks": []
+                            },
+                            {
+                              "id": 27,
+                              "title": "Dr.",
+                              "description": "Aut dolores voluptatem blanditiis eum.",
+                              "status": "Est.",
+                              "priority": 4,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 25,
+                              "tasks": []
+                            },
+                            {
+                              "id": 28,
+                              "title": "Mr.",
+                              "description": "Labore aliquid nobis deserunt.",
+                              "status": "Enim.",
+                              "priority": 4,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 25,
+                              "tasks": []
+                            },
+                            {
+                              "id": 29,
+                              "title": "Dr.",
+                              "description": "Culpa beatae id qui eaque.",
+                              "status": "Ad.",
+                              "priority": 5,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 25,
+                              "tasks": []
+                            },
+                            {
+                              "id": 30,
+                              "title": "Dr.",
+                              "description": "Suscipit voluptatibus incidunt quod hic sed.",
+                              "status": "Quod.",
+                              "priority": 2,
+                              "createdAt": "18:40:36",
+                              "completedAt": null,
+                              "userId": 1,
+                              "taskId": 25,
+                              "tasks": []
+                            }
+                          ]
                         }
                       ]
                     }
@@ -750,6 +1135,96 @@
         "security": [
           {
             "Authorization": []
+          }
+        ],
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "search",
+            "description": "search by title or description"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "filter[status]",
+            "description": "filter by status"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "filter[priority]",
+            "description": "filter by priority"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "filter[created_at]",
+            "description": "filter by created_at"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "filter[completed_at]",
+            "description": "filter by completed_at"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "sort[status]",
+            "description": "sort by status (asc, desc)"
+          },
+          {
+            "schema": {
+              "type": "integer"
+            },
+            "in": "query",
+            "name": "sort[priority]",
+            "description": "sort by priority (asc, desc)"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "sort[title]",
+            "description": "sort by title (asc, desc)"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "sort[description]",
+            "description": "sort by description (asc, desc)"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "sort[created_at]",
+            "description": "sort by created_at (asc, desc)"
+          },
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "name": "sort[completed_at]",
+            "description": "sort by completed_at (asc, desc)"
           }
         ]
       },
