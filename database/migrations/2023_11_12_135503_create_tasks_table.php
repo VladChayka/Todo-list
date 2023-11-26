@@ -19,9 +19,11 @@ return new class extends Migration
             $table->string('description');
             $table->string('status');
             $table->integer('priority');
-            $table->time('created_at');
-            $table->time('completed_at')->nullable();
+            $table->timestamp('created_at');
+            $table->timestamp('completed_at')->nullable();
             $table->fullText(['title', 'description']);
+            $table->index('status');
+            $table->index('priority');
             $table->foreignIdFor(User::class)->nullable()->constrained()->onDelete('cascade');
             $table->foreignIdFor(Task::class)->nullable()->constrained()->onDelete('cascade');
         });

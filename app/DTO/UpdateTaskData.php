@@ -5,7 +5,6 @@ namespace App\DTO;
 readonly class UpdateTaskData
 {
     public function __construct(
-        public int         $id,
         public string      $title,
         public string      $description,
         public int         $priority,
@@ -18,7 +17,6 @@ readonly class UpdateTaskData
     public function toArray()
     {
         return [
-            'id' => $this->id,
             'title' => $this->title,
             'description' => $this->description,
             'priority' => $this->priority,

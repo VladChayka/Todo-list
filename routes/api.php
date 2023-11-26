@@ -25,13 +25,13 @@ Route::post('/login', [LoginController::class, 'storeToken']);
 Route::middleware('auth:api')->group(function () {
     Route::post('/logout', [LoginController::class, 'revokeToken']);
 
-    // Get tasks
+    // Tasks actions
     Route::prefix('tasks')->group(function () {
         Route::get('/', [TaskController::class, 'index']);
-        Route::get('/{id}', [TaskController::class, 'show']);
+        Route::get('/{task}', [TaskController::class, 'show']);
         Route::post('/', [TaskController::class, 'store']);
-        Route::put('/{id}', [TaskController::class, 'update']);
-        Route::put('/{id}/update-status', [TaskController::class, 'updateStatus']);
-        Route::delete('/{id}', [TaskController::class, 'destroy']);
+        Route::put('/{task}', [TaskController::class, 'update']);
+        Route::put('/{task}/update-status', [TaskController::class, 'updateStatus']);
+        Route::delete('/{task}', [TaskController::class, 'destroy']);
     });
 });

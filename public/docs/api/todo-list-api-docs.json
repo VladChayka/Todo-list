@@ -1346,15 +1346,16 @@
       },
       "parameters": []
     },
-    "/tasks/{id}": {
+    "/tasks/{task}": {
       "parameters": [
         {
           "schema": {
-            "type": "string"
+            "type": "integer"
           },
-          "name": "id",
+          "name": "task",
           "in": "path",
-          "required": true
+          "required": true,
+          "description": "Task id"
         }
       ],
       "get": {
@@ -1750,15 +1751,16 @@
         "description": "Delete one task"
       }
     },
-    "/tasks/{id}/update-status": {
+    "/tasks/{task}/update-status": {
       "parameters": [
         {
           "schema": {
-            "type": "string"
+            "type": "integer"
           },
-          "name": "id",
+          "name": "task",
           "in": "path",
-          "required": true
+          "required": true,
+          "description": "Task id"
         }
       ],
       "put": {

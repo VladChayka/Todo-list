@@ -2,16 +2,12 @@
 
 namespace App\Repositories;
 
-use App\DTO\GetIdData;
-use App\DTO\UpdateTaskData;
-use App\DTO\UpdateTaskStatusData;
 use App\Enum\TaskStatusEnum;
 use App\Filters\TaskFilter;
 use App\Models\Task;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Auth;
 
 class TaskRepository
 {
@@ -23,14 +19,12 @@ class TaskRepository
 
     public function getById(int $id): Task
     {
-        $task = Task::findOrFail($id);
-
-        return $task;
+        return Task::findOrFail($id);
     }
 
     public function index()
     {
-        $tasks = Task::query()
+        return Task::query()
             ->with('tasks')
             ->when(request('search'), function ($query, $search) {
                 $query->whereFullText(['title', 'description'], $search);
@@ -40,17 +34,13 @@ class TaskRepository
                 $query->whereNull('task_id');
             })
             ->get();
-
-        return $tasks;
     }
 
-    public function show(GetIdData $taskId): Model|Collection|Builder|array|null
+    public function show(int $id): Model|Collection|Builder|array|null
     {
-        $task = Task::query()
+        return Task::query()
             ->with('tasks')
-            ->findOrFail($taskId->id);
-
-        return $task;
+            ->findOrFail($id);
     }
 
     public function store(Task $newTask): Task
@@ -60,22 +50,34 @@ class TaskRepository
         return $newTask;
     }
 
-    public function update(UpdateTaskData $updateTaskData, Task $task): Task
+    public function update(array $updateTaskData, int $id): Task
     {
-        $task->update($updateTaskData->toArray());
+        $task = $this->getById($id);
+
+        $task->update($updateTaskData);
 
         return $task;
     }
 
-    public function updateStatus(UpdateTaskStatusData $updateTaskStatusData, Task $task): Task
+    public function updateStatus(array $updateTaskStatusData, int $id): Task
     {
-        $task->update($updateTaskStatusData->toArray());
+        $task = $this->getById($id);
+
+        $subtaskStatuses = $task->tasks()->pluck('status')->toArray();
+
+        if ($updateTaskStatusData['status'] === TaskStatusEnum::DONE->value && in_array(TaskStatusEnum::TODO->value, $subtaskStatuses)) {
+            return abort(\Symfony\Component\HttpFoundation\Response::HTTP_FORBIDDEN, 'Cannot set status to "done" because there are subtasks or task with status "todo".');
+        }
+
+        $task->update($updateTaskStatusData);
 
         return $task;
     }
 
-    public function destroy(Task $task): Task
+    public function destroy(int $id): Task
     {
+        $task = $this->getById($id);
+
         $task->delete();
 
         return $task;

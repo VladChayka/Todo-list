@@ -24,9 +24,7 @@ class UpdateTaskRequest extends StoreTaskRequest
 
         unset($parentRules['status']);
 
-        return array_merge($parentRules, [
-            'id' => ['required', 'int'],
-        ]);
+        return array_merge($parentRules);
     }
 
     public function validationData()

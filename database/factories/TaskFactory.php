@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use App\Enum\TaskStatusEnum;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use function Laravel\Prompts\text;
+use Illuminate\Support\Carbon;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Task>
@@ -23,7 +23,7 @@ class TaskFactory extends Factory
             'description' => fake()->text(50),
             'status' => TaskStatusEnum::TODO->value,
             'priority' => fake()->numberBetween(1, 5),
-            'created_at' => now(),
+            'created_at' => Carbon::now(),
             'user_id' => 1
         ];
     }

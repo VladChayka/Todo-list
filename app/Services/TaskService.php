@@ -2,13 +2,12 @@
 
 namespace App\Services;
 
-use App\DTO\GetIdData;
 use App\DTO\TaskData;
 use App\DTO\UpdateTaskData;
 use App\DTO\UpdateTaskStatusData;
-use App\Enum\TaskStatusEnum;
 use App\Models\Task;
 use App\Repositories\TaskRepository;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Auth;
 
 class TaskService
@@ -36,31 +35,24 @@ class TaskService
         return $this->taskRepository->store($newTask);
     }
 
-    public function update(UpdateTaskData $updateTaskData): Task
+    public function update(UpdateTaskData $updateTaskData, int $id): Task
     {
-        $task = $this->taskRepository->getById($updateTaskData->id);
+        $updateTaskData = $updateTaskData->toArray();
 
-        $task = $this->taskRepository->update($updateTaskData, $task);
+        $task = $this->taskRepository->update($updateTaskData, $id);
 
         return $task;
     }
 
-    public function updateStatus(UpdateTaskStatusData $updateTaskStatusData): Task
+    public function updateStatus(UpdateTaskStatusData $updateTaskStatusData, int $id): JsonResponse|Task
     {
-        $task = $this->taskRepository->getById($updateTaskStatusData->id);
+        $updateTaskStatusData = $updateTaskStatusData->toArray();
 
-        $subtaskStatuses = $task->tasks()->pluck('status')->toArray();
-
-        if (in_array(TaskStatusEnum::TODO->value, $subtaskStatuses)) {
-            return abort(\Symfony\Component\HttpFoundation\Response::HTTP_FORBIDDEN, 'Cannot set status to "done" because there are subtasks or task with status "todo".');
-        }
-
-        return $this->taskRepository->updateStatus($updateTaskStatusData, $task);
+        return $this->taskRepository->updateStatus(updateTaskStatusData: $updateTaskStatusData, id: $id);
     }
 
-    public function destroy(GetIdData $taskId): Task
+    public function destroy(int $id): Task
     {
-        $task = $this->taskRepository->getById($taskId->id);
-        return $this->taskRepository->destroy($task);
+        return $this->taskRepository->destroy($id);
     }
 }

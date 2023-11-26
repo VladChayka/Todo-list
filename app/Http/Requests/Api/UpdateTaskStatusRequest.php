@@ -3,9 +3,10 @@
 namespace App\Http\Requests\Api;
 
 use App\Enum\TaskStatusEnum;
+use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class UpdateTaskStatusRequest extends GetIdRequest
+class UpdateTaskStatusRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,9 +23,9 @@ class UpdateTaskStatusRequest extends GetIdRequest
      */
     public function rules(): array
     {
-        return array_merge(parent::rules(), [
+        return [
             'status' => ['required', 'string', Rule::in(TaskStatusEnum::cases())],
-        ]);
+        ];
     }
 
     public function validationData()
