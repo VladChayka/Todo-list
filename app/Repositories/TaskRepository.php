@@ -36,13 +36,6 @@ class TaskRepository
             ->get();
     }
 
-    public function show(int $id): Model|Collection|Builder|array|null
-    {
-        return Task::query()
-            ->with('tasks')
-            ->findOrFail($id);
-    }
-
     public function store(Task $newTask): Task
     {
         $newTask->save();
@@ -74,10 +67,8 @@ class TaskRepository
         return $task;
     }
 
-    public function destroy(int $id): Task
+    public function destroy(Task $task): Task
     {
-        $task = $this->getById($id);
-
         $task->delete();
 
         return $task;

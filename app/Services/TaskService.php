@@ -50,9 +50,4 @@ class TaskService
 
         return $this->taskRepository->updateStatus(updateTaskStatusData: $updateTaskStatusData, id: $id);
     }
-
-    public function destroy(int $id): Task
-    {
-        return $this->taskRepository->destroy($id);
-    }
 }

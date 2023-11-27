@@ -57,9 +57,9 @@ class TaskController extends BaseApiController
      */
     public function show(Task $task): JsonResponse
     {
-        $task = $this->taskRepository->show($task->id);
-
         $this->authorize('view', $task);
+
+        $task->load('tasks');
 
         return self::successfulResponseWithData($task);
 
@@ -103,7 +103,7 @@ class TaskController extends BaseApiController
     {
         $this->authorize('delete', $task);
 
-        $this->taskService->destroy($task->id);
+        $this->taskRepository->destroy($task);
 
         return self::successfulResponse();
     }
